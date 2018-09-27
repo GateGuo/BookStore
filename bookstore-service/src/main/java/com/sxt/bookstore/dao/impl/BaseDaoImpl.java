@@ -2,7 +2,7 @@ package com.sxt.bookstore.dao.impl;
 
 import com.sxt.bookstore.dao.BaseDao;
 import com.sxt.bookstore.util.DruidDbUtil;
-import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.*;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
@@ -26,7 +26,8 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
 
     /**
      * 通过查询获取一个数据元素列表
-     * @param sql sql语句
+     *
+     * @param sql    sql语句
      * @param params 参数
      * @return
      * @throws SQLException
@@ -49,15 +50,22 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
 
     /**
      * 通过查询获取一个数据元素
-     * @param sql sql语句
+     *
+     * @param sql    sql语句
      * @param params 参数
      * @return
      * @throws SQLException
      */
     protected T dqlGetSingle(String sql, Object[] params) throws SQLException {
 
+        // 创建一个BeanProcessor对象
+        // GenerousBeanProcessor 仅仅重写了父类BeanProcessor的mapColumnsToProperties方法
+        BeanProcessor bean = new GenerousBeanProcessor();
+        // 将GenerousBeanProcessor对象传递给BasicRowProcessor
+        RowProcessor processor = new BasicRowProcessor(bean);
+
         T t = queryRunner.query(sql,
-                new BeanHandler<>(tClass),
+                new BeanHandler<>(tClass, processor),
                 params);
 
         return t;
@@ -65,6 +73,7 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
 
     /**
      * 通过查询获取数据数目(公有逻辑)
+     *
      * @param sql sql语句
      * @return
      * @throws SQLException
@@ -79,7 +88,8 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
 
     /**
      * 更新一个数据元素
-     * @param sql sql语句
+     *
+     * @param sql    sql语句
      * @param params 参数
      * @return
      * @throws SQLException

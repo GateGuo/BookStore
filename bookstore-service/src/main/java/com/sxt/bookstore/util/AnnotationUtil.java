@@ -24,6 +24,7 @@ public class AnnotationUtil {
 
         classs.forEach(classPath ->{
             try {
+//                System.out.println(classPath);
                 Class<?> aClass = Class.forName(classPath);
                 if (aClass.getSuperclass().equals(BaseDaoImpl.class)) {
                     Dao dao = aClass.getAnnotation(Dao.class);
@@ -36,7 +37,6 @@ public class AnnotationUtil {
                 e.printStackTrace();
             }
         });
-        map.keySet().forEach(System.out::println);
 
         return map;
     }
@@ -53,7 +53,6 @@ public class AnnotationUtil {
         //获取class路径
         String[] fileNameList = file.list((dir, name) -> {
             String regex = "[\\S\\s]+.class";
-            System.out.println(name);
             return name.matches(regex);
         });
         //拼接全路径名

@@ -15,21 +15,21 @@ public class DaoFactory {
      * 工厂实例
      */
     private static final DaoFactory ourInstance;
-    /**
-     * 读取配置文件实例
-     */
-    private static Properties properties;
+//    /**
+//     * 读取配置文件实例
+//     */
+//    private static Properties properties;
 
     static {
         ourInstance = new DaoFactory();
-        try {
-            properties = new Properties();
-            InputStream inputStream = DaoFactory.class.getClassLoader()
-                    .getResourceAsStream("daoConfig.properties");
-            properties.load(inputStream);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            properties = new Properties();
+//            InputStream inputStream = DaoFactory.class.getClassLoader()
+//                    .getResourceAsStream("daoConfig.properties");
+//            properties.load(inputStream);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
     }
 
