@@ -11,7 +11,7 @@ package com.sxt.bookstore.entity;
  */
 public class Admins implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = -6691446239747194616L;
+    private static final long serialVersionUID = 1386112035466820461L;
 
     /** 管理员id */
     private Integer aId;

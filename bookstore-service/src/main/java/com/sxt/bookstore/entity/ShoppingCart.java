@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class ShoppingCart implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = 2522397949878101771L;
+    private static final long serialVersionUID = 2589280739102054453L;
 
     /** id */
     private Integer scId;

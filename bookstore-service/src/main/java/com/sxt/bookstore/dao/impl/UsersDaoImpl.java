@@ -23,8 +23,16 @@ public class UsersDaoImpl extends BaseDaoImpl<Users> implements UsersDao  {
                 "U_ID_CARD," +
                 "U_NAME," +
                 "U_ADDRESS," +
-                "U_PHONENUMBER" +
+                "U_PHONENUMBER," +
+                "U_ACCOUNT_BALANCE," +
+                "U_SALES_BALANCE," +
+                "U_TOTAL_RECHARGE," +
+                "U_IS_SELLER" +
                 ") VALUE(" +
+                "?," +
+                "?," +
+                "?," +
+                "?," +
                 "?," +
                 "?," +
                 "?," +
@@ -41,7 +49,11 @@ public class UsersDaoImpl extends BaseDaoImpl<Users> implements UsersDao  {
                 usersBean.getUIdCard(),
                 usersBean.getUName(),
                 usersBean.getUAddress(),
-                usersBean.getUPhonenumber()
+                usersBean.getUPhonenumber(),
+                usersBean.getUAccountBalance(),
+                usersBean.getUSalesBalance(),
+                usersBean.getUTotalRecharge(),
+                usersBean.getUIsSeller()
         };
         boolean flag = dml(sql, params);
 
@@ -57,7 +69,11 @@ public class UsersDaoImpl extends BaseDaoImpl<Users> implements UsersDao  {
                 "U_ID_CARD = ?," +
                 "U_NAME = ?," +
                 "U_ADDRESS = ?," +
-                "U_PHONENUMBER = ? " +
+                "U_PHONENUMBER = ?," +
+                "U_ACCOUNT_BALANCE = ?," +
+                "U_SALES_BALANCE = ?," +
+                "U_TOTAL_RECHARGE = ?," +
+                "U_IS_SELLER = ? " +
                 " WHERE U_ID = ?";
 
         Object[] params = {
@@ -68,6 +84,10 @@ public class UsersDaoImpl extends BaseDaoImpl<Users> implements UsersDao  {
                 usersBean.getUName(),
                 usersBean.getUAddress(),
                 usersBean.getUPhonenumber(),
+                usersBean.getUAccountBalance(),
+                usersBean.getUSalesBalance(),
+                usersBean.getUTotalRecharge(),
+                usersBean.getUIsSeller(),
                 usersBean.getUId()
 
         };

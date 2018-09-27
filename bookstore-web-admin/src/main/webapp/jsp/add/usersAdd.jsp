@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
   Date: 2018-09-27
-  Time: 14:32:10
+  Time: 19:32:17
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -59,6 +59,30 @@
                     <label class="layui-form-label">手机号码</label>
                     <div class="layui-input-block">
                         <input class="layui-input" type="text" name="uPhonenumber" id="uPhonenumber">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">账户余额</label>
+                    <div class="layui-input-block">
+                        <input class="layui-input" type="text" name="uAccountBalance" id="uAccountBalance">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">销售余额</label>
+                    <div class="layui-input-block">
+                        <input class="layui-input" type="text" name="uSalesBalance" id="uSalesBalance">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">总共充值金额</label>
+                    <div class="layui-input-block">
+                        <input class="layui-input" type="text" name="uTotalRecharge" id="uTotalRecharge">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">是否卖家</label>
+                    <div class="layui-input-block">
+                        <input class="layui-input" type="text" name="uIsSeller" id="uIsSeller">
                     </div>
                 </div>
                 <div class="layui-form-item">

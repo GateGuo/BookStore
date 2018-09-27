@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class Comments implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = 7042673914034796236L;
+    private static final long serialVersionUID = -2537417247203060105L;
 
     /** 评论id */
     private Integer cId;

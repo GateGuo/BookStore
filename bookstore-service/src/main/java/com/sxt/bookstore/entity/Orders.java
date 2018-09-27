@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class Orders implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = 8653761291323120972L;
+    private static final long serialVersionUID = -2483327670330105562L;
 
     /** 订单id */
     private Integer orId;

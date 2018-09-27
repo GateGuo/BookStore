@@ -41,18 +41,10 @@
             ,even: true
             ,cols: [[ //表头
                 {type:'checkbox', fixed: 'left'}
-                ,{field: 'uId', title: '用户id',  sort: true, fixed: 'left'}
-                ,{field: 'uUsername', title: '用户名'}
-                ,{field: 'uPassword', title: '密码'}
-                ,{field: 'uVipLevel', title: '会员等级'}
-                ,{field: 'uIdCard', title: '身份证'}
-                ,{field: 'uName', title: '姓名'}
-                ,{field: 'uAddress', title: '地址'}
-                ,{field: 'uPhonenumber', title: '手机号码'}
-                ,{field: 'uAccountBalance', title: '账户余额'}
-                ,{field: 'uSalesBalance', title: '销售余额'}
-                ,{field: 'uTotalRecharge', title: '总共充值金额'}
-                ,{field: 'uIsSeller', title: '是否卖家'}
+                ,{field: 'arId', title: '',  sort: true, fixed: 'left'}
+                ,{field: 'arName', title: '名称'}
+                ,{field: 'arLevel', title: '层级标识： 1  省份'}
+                ,{field: 'arParentId', title: '父节点'}
                 ,{fixed: 'right', width: 120, align:'center', toolbar: '#barDemo'}
             ]]
             ,response: {

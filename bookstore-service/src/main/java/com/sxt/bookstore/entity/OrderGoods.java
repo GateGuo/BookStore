@@ -11,7 +11,7 @@ package com.sxt.bookstore.entity;
  */
 public class OrderGoods implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = -7681910800839881028L;
+    private static final long serialVersionUID = 6305180519935836030L;
 
     /** 商品id */
     private Integer ogId;

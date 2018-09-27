@@ -49,6 +49,7 @@
                 ,{field: 'bDescription', title: '描述'}
                 ,{field: 'bTId', title: '分类id'}
                 ,{field: 'bUpTime', title: '上架时间'}
+                ,{field: 'bSalesVolume', title: '销量'}
                 ,{fixed: 'right', width: 120, align:'center', toolbar: '#barDemo'}
             ]]
             ,response: {

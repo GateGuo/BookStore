@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class OldBooks implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = 4025633882961946117L;
+    private static final long serialVersionUID = 1879438300077615686L;
 
     /** 二手书籍id */
     private Integer obId;

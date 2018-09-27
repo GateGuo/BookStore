@@ -11,7 +11,7 @@ package com.sxt.bookstore.entity;
  */
 public class Users implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = -8358071221866406431L;
+    private static final long serialVersionUID = -101522732093084048L;
 
     /** 用户id */
     private Integer uId;
@@ -36,6 +36,18 @@ public class Users implements java.io.Serializable {
 
     /** 手机号码 */
     private String uPhonenumber;
+
+    /** 账户余额 */
+    private Double uAccountBalance;
+
+    /** 销售余额 */
+    private Double uSalesBalance;
+
+    /** 总共充值金额 */
+    private Double uTotalRecharge;
+
+    /** 是否卖家 */
+    private Integer uIsSeller;
     
     /**
      * 获取用户id
@@ -187,5 +199,81 @@ public class Users implements java.io.Serializable {
      */
     public void setUPhonenumber(String uPhonenumber) {
         this.uPhonenumber = uPhonenumber;
+    }
+    
+    /**
+     * 获取账户余额
+     * 
+     * @return 账户余额
+     */
+    public Double getUAccountBalance() {
+        return this.uAccountBalance;
+    }
+    
+    /**
+     * 设置账户余额
+     * 
+     * @param uAccountBalance
+     *          账户余额
+     */
+    public void setUAccountBalance(Double uAccountBalance) {
+        this.uAccountBalance = uAccountBalance;
+    }
+    
+    /**
+     * 获取销售余额
+     * 
+     * @return 销售余额
+     */
+    public Double getUSalesBalance() {
+        return this.uSalesBalance;
+    }
+    
+    /**
+     * 设置销售余额
+     * 
+     * @param uSalesBalance
+     *          销售余额
+     */
+    public void setUSalesBalance(Double uSalesBalance) {
+        this.uSalesBalance = uSalesBalance;
+    }
+    
+    /**
+     * 获取总共充值金额
+     * 
+     * @return 总共充值金额
+     */
+    public Double getUTotalRecharge() {
+        return this.uTotalRecharge;
+    }
+    
+    /**
+     * 设置总共充值金额
+     * 
+     * @param uTotalRecharge
+     *          总共充值金额
+     */
+    public void setUTotalRecharge(Double uTotalRecharge) {
+        this.uTotalRecharge = uTotalRecharge;
+    }
+    
+    /**
+     * 获取是否卖家
+     * 
+     * @return 是否卖家
+     */
+    public Integer getUIsSeller() {
+        return this.uIsSeller;
+    }
+    
+    /**
+     * 设置是否卖家
+     * 
+     * @param uIsSeller
+     *          是否卖家
+     */
+    public void setUIsSeller(Integer uIsSeller) {
+        this.uIsSeller = uIsSeller;
     }
 }

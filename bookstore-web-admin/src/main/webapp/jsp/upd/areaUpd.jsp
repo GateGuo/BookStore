@@ -2,14 +2,14 @@
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
   Date: 2018-09-27
-  Time: 19:32:17
+  Time: 19:32:18
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>增加订单表信息</title>
+    <title>增加区县行政编码字典表信息</title>
     <script type="text/javascript" src="/layui/layui.js"></script>
     <script type="text/javascript" src="/js/jquery.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
@@ -20,45 +20,27 @@
         <div class="layui-col-lg-offset3 layui-col-lg6">
             <form class="layui-form-pane layui-form" action="" method="post">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">订单编号</label>
+                    <label class="layui-form-label">arId</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orNumber" id="orNumber">
+                        <input class="layui-input" type="text" name="arId" id="arId" value="${Bean.arId}" disabled>
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">用户id</label>
+                    <label class="layui-form-label">名称</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orUId" id="orUId">
+                        <input class="layui-input" type="text" name="arName" id="arName" value="${Bean.arName}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">总金额</label>
+                    <label class="layui-form-label">层级标识： 1  省份， 2  市， 3  区县</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orTotalPrice" id="orTotalPrice">
+                        <input class="layui-input" type="text" name="arLevel" id="arLevel" value="${Bean.arLevel}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">支付金额</label>
+                    <label class="layui-form-label">父节点</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orPayPrice" id="orPayPrice">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">订单生成时间</label>
-                    <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orCreateTime" id="orCreateTime">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">订单完成时间</label>
-                    <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orFinishTime" id="orFinishTime">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">订单状态</label>
-                    <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orStatus" id="orStatus">
+                        <input class="layui-input" type="text" name="arParentId" id="arParentId" value="${Bean.arParentId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">

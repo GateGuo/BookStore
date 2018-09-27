@@ -11,7 +11,7 @@ package com.sxt.bookstore.entity;
  */
 public class Records implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = 8197901505133261153L;
+    private static final long serialVersionUID = 3118122179546314502L;
 
     /** 记录id */
     private Integer rId;

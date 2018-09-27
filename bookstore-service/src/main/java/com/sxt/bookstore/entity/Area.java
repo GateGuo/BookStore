@@ -11,7 +11,7 @@ package com.sxt.bookstore.entity;
  */
 public class Area implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = 8224105195503015920L;
+    private static final long serialVersionUID = -313270080997826156L;
 
     /** arId */
     private Integer arId;

@@ -11,7 +11,7 @@ package com.sxt.bookstore.entity;
  */
 public class Type implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = 5215196565547027295L;
+    private static final long serialVersionUID = -3451286876903541500L;
 
     /** 类别id */
     private Integer tId;
@@ -99,15 +99,5 @@ public class Type implements java.io.Serializable {
      */
     public void setTLevel(Integer tLevel) {
         this.tLevel = tLevel;
-    }
-
-    @Override
-    public String toString() {
-        return "Type{" +
-                "tId=" + tId +
-                ", tName='" + tName + '\'' +
-                ", tParentId=" + tParentId +
-                ", tLevel=" + tLevel +
-                '}';
     }
 }

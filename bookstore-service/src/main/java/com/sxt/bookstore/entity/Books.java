@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class Books implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = 8380825510743737538L;
+    private static final long serialVersionUID = 874510483651027719L;
 
     /** 书籍id */
     private Integer bId;
@@ -36,6 +36,9 @@ public class Books implements java.io.Serializable {
 
     /** 上架时间 */
     private Date bUpTime;
+
+    /** 销量 */
+    private Integer bSalesVolume;
     
     /**
      * 获取书籍id
@@ -187,5 +190,24 @@ public class Books implements java.io.Serializable {
      */
     public void setBUpTime(Date bUpTime) {
         this.bUpTime = bUpTime;
+    }
+    
+    /**
+     * 获取销量
+     * 
+     * @return 销量
+     */
+    public Integer getBSalesVolume() {
+        return this.bSalesVolume;
+    }
+    
+    /**
+     * 设置销量
+     * 
+     * @param bSalesVolume
+     *          销量
+     */
+    public void setBSalesVolume(Integer bSalesVolume) {
+        this.bSalesVolume = bSalesVolume;
     }
 }
