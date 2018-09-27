@@ -9,7 +9,7 @@ public interface BaseService<T> {
     /**
      * 增加数据表元素
      * @param bean bean对象
-     * @return 
+     * @return
      */
     boolean add(T bean) throws SQLException;
 
