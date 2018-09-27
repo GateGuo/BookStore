@@ -1,10 +1,13 @@
 package com.sxt.bookstore.util;
 
+import com.alibaba.druid.filter.Filter;
+import com.alibaba.druid.filter.logging.Log4j2Filter;
 import com.alibaba.druid.pool.DruidDataSource;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 /**
@@ -30,14 +33,14 @@ public class DruidDbUtil {
         try {
             dataSource.setFilters("stat");
 
-//            Log4j2Filter log4j2Filter = new Log4j2Filter();
-//            log4j2Filter.setConnectionLogEnabled(false);
-//            log4j2Filter.setResultSetLogEnabled(false);
-//            log4j2Filter.setStatementLogEnabled(true);
-//            log4j2Filter.setStatementExecutableSqlLogEnable(true);
-//            ArrayList<Filter> filters = new ArrayList<>();
-//            filters.add(log4j2Filter);
-//            dataSource.setProxyFilters(filters);
+            Log4j2Filter log4j2Filter = new Log4j2Filter();
+            log4j2Filter.setConnectionLogEnabled(false);
+            log4j2Filter.setResultSetLogEnabled(false);
+            log4j2Filter.setStatementLogEnabled(true);
+            log4j2Filter.setStatementExecutableSqlLogEnable(true);
+            ArrayList<Filter> filters = new ArrayList<>();
+            filters.add(log4j2Filter);
+            dataSource.setProxyFilters(filters);
 
 
             Properties properties = new Properties();
