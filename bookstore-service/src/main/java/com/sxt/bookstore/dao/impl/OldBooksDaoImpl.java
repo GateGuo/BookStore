@@ -1,5 +1,6 @@
 package com.sxt.bookstore.dao.impl;
 
+import com.sxt.bookstore.annotation.Dao;
 import com.sxt.bookstore.dao.OldBooksDao;
 import com.sxt.bookstore.entity.OldBooks;
 import com.sxt.bookstore.entity.Page;
@@ -11,6 +12,7 @@ import java.util.List;
  * 二手图书表服务模块Dao接口实现
  * @author Q2665_yubiums
  */
+@Dao("OldBooks")
 public class OldBooksDaoImpl extends BaseDaoImpl<OldBooks> implements OldBooksDao  {
     @Override
     public boolean add(OldBooks old_booksBean) throws SQLException {

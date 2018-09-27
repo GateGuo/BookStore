@@ -1,5 +1,6 @@
 package com.sxt.bookstore.dao.impl;
 
+import com.sxt.bookstore.annotation.Dao;
 import com.sxt.bookstore.dao.AdminsDao;
 import com.sxt.bookstore.entity.Admins;
 import com.sxt.bookstore.entity.Page;
@@ -11,6 +12,7 @@ import java.util.List;
  * 管理员表服务模块Dao接口实现
  * @author Q2665_yubiums
  */
+@Dao("Admins")
 public class AdminsDaoImpl extends BaseDaoImpl<Admins> implements AdminsDao  {
     @Override
     public boolean add(Admins adminsBean) throws SQLException {

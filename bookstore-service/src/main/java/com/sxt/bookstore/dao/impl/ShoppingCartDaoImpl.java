@@ -1,5 +1,6 @@
 package com.sxt.bookstore.dao.impl;
 
+import com.sxt.bookstore.annotation.Dao;
 import com.sxt.bookstore.dao.ShoppingCartDao;
 import com.sxt.bookstore.entity.ShoppingCart;
 import com.sxt.bookstore.entity.Page;
@@ -11,6 +12,7 @@ import java.util.List;
  * 购物车表服务模块Dao接口实现
  * @author Q2665_yubiums
  */
+@Dao("ShoppingCart")
 public class ShoppingCartDaoImpl extends BaseDaoImpl<ShoppingCart> implements ShoppingCartDao  {
     @Override
     public boolean add(ShoppingCart shopping_cartBean) throws SQLException {

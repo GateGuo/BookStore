@@ -1,5 +1,6 @@
 package com.sxt.bookstore.dao.impl;
 
+import com.sxt.bookstore.annotation.Dao;
 import com.sxt.bookstore.dao.OrderGoodsDao;
 import com.sxt.bookstore.entity.OrderGoods;
 import com.sxt.bookstore.entity.Page;
@@ -11,6 +12,7 @@ import java.util.List;
  * 订单商品表服务模块Dao接口实现
  * @author Q2665_yubiums
  */
+@Dao("OrderGoods")
 public class OrderGoodsDaoImpl extends BaseDaoImpl<OrderGoods> implements OrderGoodsDao  {
     @Override
     public boolean add(OrderGoods order_goodsBean) throws SQLException {

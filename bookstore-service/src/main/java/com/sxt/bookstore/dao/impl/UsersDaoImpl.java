@@ -1,5 +1,6 @@
 package com.sxt.bookstore.dao.impl;
 
+import com.sxt.bookstore.annotation.Dao;
 import com.sxt.bookstore.dao.UsersDao;
 import com.sxt.bookstore.entity.Users;
 import com.sxt.bookstore.entity.Page;
@@ -11,6 +12,7 @@ import java.util.List;
  * 用户表服务模块Dao接口实现
  * @author Q2665_yubiums
  */
+@Dao("Users")
 public class UsersDaoImpl extends BaseDaoImpl<Users> implements UsersDao  {
     @Override
     public boolean add(Users usersBean) throws SQLException {

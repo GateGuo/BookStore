@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <base basedao="com.sxt.book.dao.impl" />
+    <base basedao="com.sxt.bookstore.dao.impl" />
 </configuration>

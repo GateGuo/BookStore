@@ -1,5 +1,6 @@
 package com.sxt.bookstore.dao.impl;
 
+import com.sxt.bookstore.annotation.Dao;
 import com.sxt.bookstore.dao.CommentsDao;
 import com.sxt.bookstore.entity.Comments;
 import com.sxt.bookstore.entity.Page;
@@ -11,6 +12,7 @@ import java.util.List;
  * 评论表服务模块Dao接口实现
  * @author Q2665_yubiums
  */
+@Dao("Comments")
 public class CommentsDaoImpl extends BaseDaoImpl<Comments> implements CommentsDao  {
     @Override
     public boolean add(Comments commentsBean) throws SQLException {

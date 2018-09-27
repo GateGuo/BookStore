@@ -1,5 +1,6 @@
 package com.sxt.bookstore.dao.impl;
 
+import com.sxt.bookstore.annotation.Dao;
 import com.sxt.bookstore.dao.TypeDao;
 import com.sxt.bookstore.entity.Type;
 import com.sxt.bookstore.entity.Page;
@@ -11,6 +12,7 @@ import java.util.List;
  * 图书类别表服务模块Dao接口实现
  * @author Q2665_yubiums
  */
+@Dao("Type")
 public class TypeDaoImpl extends BaseDaoImpl<Type> implements TypeDao  {
     @Override
     public boolean add(Type typeBean) throws SQLException {
