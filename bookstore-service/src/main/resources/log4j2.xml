@@ -3,7 +3,7 @@
     <properties>
         <!-- log打印到本地的路径 -->
         <property name="LOG_HOME">C:/IDEA/logs</property>
-        <property name="PROJECT_NAME">work3k</property>
+        <property name="PROJECT_NAME">BookStore</property>
     </properties>
     <appenders>
 
