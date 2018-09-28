@@ -40,7 +40,6 @@ public class UserServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
 
-        System.out.println("test");
 
         String method = request.getParameter("method");
 
@@ -76,11 +75,9 @@ public class UserServlet extends HttpServlet {
         int size = Integer.parseInt(limit);
 
         try {
-            System.out.println(page);
-            System.out.println(size);
 
             Page<Users> usersPage = usersService.getPage(page, size);
-            System.out.println(usersPage.getPageData());
+
             HashMap<Object, Object> map = new HashMap<>(4);
 
 
@@ -101,15 +98,12 @@ public class UserServlet extends HttpServlet {
     private void doEditGet(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
         String uId = request.getParameter("uId");
         Users users = usersService.getOneByPrimaryKey(Integer.valueOf(uId));
-//        System.out.println(users);
 
         Integer uArId = users.getUArId();
         AreaServiceImpl areaService = new AreaServiceImpl();
         List<Area> allProvince = areaService.getAllProvince();
-//        areaService.get
 
         request.setAttribute("Bean", users);
         request.getRequestDispatcher("jsp/upd/usersUpd.jsp").forward(request, response);
-//        response.sendRedirect("jsp/upd/usersUpd.jsp");
     }
 }

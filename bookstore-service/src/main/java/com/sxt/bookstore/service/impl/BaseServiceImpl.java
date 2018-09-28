@@ -24,8 +24,6 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
     {
 
-            System.out.println(tClass.getSimpleName());
-//            baseDao = Mapping.getDaoMap().get(tClass.getSimpleName()).newInstance();
             baseDao = DaoFactory.getInstance().getDao(tClass.getSimpleName());
 
     }

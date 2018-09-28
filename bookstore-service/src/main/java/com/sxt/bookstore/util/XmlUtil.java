@@ -26,8 +26,6 @@ public class XmlUtil {
             Document document = saxReader.read(inputStream);
             Node node = document.selectSingleNode("/configuration/base");
             baseDaoPath = node.valueOf("@basedao");
-//            System.out.println(baseDaoPath);
-//            baseDaoPath = "bookstore"
         } catch (DocumentException e) {
             e.printStackTrace();
         }
