@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css">
+
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 0 auto;
+            font-family: "微软雅黑 Semibold";
+            background-color: #f7f7f6;
+        }
+
+        .nv-he {
+            font-size: small;
+            height: 35px;
+            background-color: #a62f39;
+            line-height: 35px;
+            color: aliceblue;
+        }
+
+        #nav-he {
+            float: right;
+        }
+
+        #nav-he li {
+            float: left;
+            list-style-type: none;
+            margin-left: 5px;
+        }
+
+        #nav-he li a {
+            text-decoration: none;
+        }
+
+        .nv-mid {
+            height: 100px;
+        }
+
+        .se-new {
+            float: left;
+            padding: 10px;
+        }
+
+        .se-old {
+            padding: 10px;
+        }
+
+        .se {
+            font-size: small;
+        }
+
+        #se-text {
+            border: 3px solid #a62f39;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        #se-sub {
+            background-color: #a62f39;
+            outline: none;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            color: aliceblue;
+            line-height: 30px;
+        }
+
+        .nv-foo {
+            background-color: white;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        #nv-nav {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #nv-nav li {
+            float: left;
+            margin: auto 10px;
+        }
+        #nv-nav li a{
+            text-decoration: none;
+        }
+
+        .nv_foo_head_line {
+            position: relative;
+            text-decoration: none;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .a-active{
+            position: relative;
+            text-decoration: none;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .a-active:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 100%;
+            transform: scale(1);
+            height: 2px;
+            background: #a62f39;
+            transition: all .3s;
+        }
+
+        .a-active:hover:before {
+            transform: scale(1);
+        }
+
+        .nv_foo_head_line:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 100%;
+            transform: scale(0);
+            height: 2px;
+            background: #a62f39;
+            transition: all .3s;
+        }
+
+        .nv_foo_head_line:hover:before {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nv-he">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <span>书海翱游,总有让你不能自拔的一片</span>
+                </div>
+                <div class="col-8 pull-right">
+                    <ul id="nav-he">
+                        <li><a href="#" class="text-light">Lorem.</a></li>
+                        <li><a href="#" class="text-light">Dolorem.</a></li>
+                        <li><a href="#" class="text-light">Dolorem.</a></li>
+                        <li><a href="#" class="text-light">Eaque.</a></li>
+                        <li><a href="#" class="text-light">Ipsa.</a></li>
+                        <li><a href="#" class="text-light">Aut.</a></li>
+                        <li><a href="#" class="text-light">Qui!</a></li>
+                        <li><a href="#" class="text-light">Natus.</a></li>
+                        <li><a href="#" class="text-light">Ipsum!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nv-mid">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <span style="line-height: 100px;font-size: 50px">logo</span>
+                </div>
+                <div class="col-7 offset-1">
+                    <div class="se">
+                        <div class="se-new">搜新书</div>
+                        <div class="se-old">搜二手书</div>
+                        <div></div>
+                    </div>
+                    <div class="input-group">
+                        <input id="se-text" type="text" class="text col-10">
+                        <a id="se-sub" class="col-2 btn">搜索</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nv-foo">
+        <div class="container">
+            <div class="row">
+                <ul id="nv-nav">
+                    <li><a href="#" class="text-dark a-active">Lorem</a></li>
+                    <li><a href="#" class="text-dark nv_foo_head_line">Lorem.</a></li>
+                    <li><a href="#" class="text-dark nv_foo_head_line">Quidem?</a></li>
+                    <li><a href="#" class="text-dark nv_foo_head_line">Quam?</a></li>
+                    <li><a href="#" class="text-dark nv_foo_head_line">Quis.</a></li>
+                    <li><a href="#" class="text-dark nv_foo_head_line">Enim!</a></li>
+                    <li><a href="#" class="text-dark nv_foo_head_line">Enim!</a></li>
+                    <li><a href="#" class="text-dark nv_foo_head_line">Aliquid!</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="./jquery/jquery.js"></script>
+<script src="./bootstrap/js/dist/popover.js"></script>
+<script src="./bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
