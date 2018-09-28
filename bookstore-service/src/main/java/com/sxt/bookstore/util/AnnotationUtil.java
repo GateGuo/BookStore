@@ -48,7 +48,11 @@ public class AnnotationUtil {
 
         URL url = Thread.currentThread().getContextClassLoader().getResource(basePath);
 
+        System.out.println(url.getPath());
+
         File file = new File(url.getPath());
+
+        System.out.println(file.getName());
 
         //获取class路径
         String[] fileNameList = file.list((dir, name) -> {

@@ -110,4 +110,34 @@ public class AreaDaoImpl extends BaseDaoImpl<Area> implements AreaDao  {
 
         return count;
     }
+
+    @Override
+    public List<Area> getAllProvince() throws SQLException {
+        String sql = "SELECT * FROM AREA WHERE AR_LEVEL = 1";
+
+        Object[] params = {};
+        List<Area> areas = dqlGetList(sql, params);
+
+        return areas;
+    }
+
+    @Override
+    public List<Area> getCityByProId(int id) throws SQLException {
+        String sql = "SELECT * FROM AREA WHERE AR_LEVEL = 2 AND AR_PARENT_ID = ?";
+
+        Object[] params = {id};
+        List<Area> areas = dqlGetList(sql, params);
+
+        return areas;
+    }
+
+    @Override
+    public List<Area> getCountyByCityId(int id) throws SQLException {
+        String sql = "SELECT * FROM AREA WHERE AR_LEVEL = 3 AND AR_PARENT_ID = ?";
+
+        Object[] params = {id};
+        List<Area> areas = dqlGetList(sql, params);
+
+        return areas;
+    }
 }

@@ -3,6 +3,7 @@ package com.sxt.bookstore.service.impl;
 
 import com.sxt.bookstore.dao.BaseDao;
 import com.sxt.bookstore.entity.Page;
+import com.sxt.bookstore.factory.DaoFactory;
 import com.sxt.bookstore.service.BaseService;
 import com.sxt.bookstore.util.Mapping;
 
@@ -22,14 +23,11 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
     protected BaseDao<T> baseDao;
 
     {
-        try {
+
             System.out.println(tClass.getSimpleName());
-            baseDao = Mapping.getDaoMap().get(tClass.getSimpleName()).newInstance();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        }
+//            baseDao = Mapping.getDaoMap().get(tClass.getSimpleName()).newInstance();
+            baseDao = DaoFactory.getInstance().getDao(tClass.getSimpleName());
+
     }
 
     @Override

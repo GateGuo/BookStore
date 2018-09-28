@@ -2,9 +2,11 @@ package com.sxt.bookstore.servlet;
 
 import com.alibaba.fastjson.JSON;
 import com.mysql.cj.xdevapi.JsonArray;
+import com.sxt.bookstore.entity.Area;
 import com.sxt.bookstore.entity.Page;
 import com.sxt.bookstore.entity.Users;
 import com.sxt.bookstore.service.UsersService;
+import com.sxt.bookstore.service.impl.AreaServiceImpl;
 import com.sxt.bookstore.service.impl.UsersServiceImpl;
 
 import javax.servlet.ServletException;
@@ -18,6 +20,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * @author Q2665_yubiums
@@ -98,7 +101,13 @@ public class UserServlet extends HttpServlet {
     private void doEditGet(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
         String uId = request.getParameter("uId");
         Users users = usersService.getOneByPrimaryKey(Integer.valueOf(uId));
-        System.out.println(users);
+//        System.out.println(users);
+
+        Integer uArId = users.getUArId();
+        AreaServiceImpl areaService = new AreaServiceImpl();
+        List<Area> allProvince = areaService.getAllProvince();
+//        areaService.get
+
         request.setAttribute("Bean", users);
         request.getRequestDispatcher("jsp/upd/usersUpd.jsp").forward(request, response);
 //        response.sendRedirect("jsp/upd/usersUpd.jsp");
