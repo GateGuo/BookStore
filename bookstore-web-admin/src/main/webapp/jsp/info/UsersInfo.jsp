@@ -48,6 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 ,{field: 'uVipLevel', title: '会员等级'}
                 ,{field: 'uIdCard', title: '身份证'}
                 ,{field: 'uName', title: '姓名'}
+                ,{field: 'uArId', title: '省市区id'}
                 ,{field: 'uAddress', title: '地址'}
                 ,{field: 'uPhonenumber', title: '手机号码'}
                 ,{field: 'uAccountBalance', title: '账户余额'}

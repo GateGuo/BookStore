@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
   Date: 2018-09-28
-  Time: 16:08:43
+  Time: 19:17:51
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -50,6 +50,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <label class="layui-form-label">姓名</label>
                     <div class="layui-input-block">
                         <input class="layui-input" type="text" name="uName" id="uName">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">省市区id</label>
+                    <div class="layui-input-block">
+                        <input class="layui-input" type="text" name="uArId" id="uArId">
                     </div>
                 </div>
                 <div class="layui-form-item">

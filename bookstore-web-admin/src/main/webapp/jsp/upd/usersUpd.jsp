@@ -59,6 +59,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </div>
                 </div>
                 <div class="layui-form-item">
+                    <label class="layui-form-label">省市区id</label>
+                    <div class="layui-input-block">
+                        <input class="layui-input" type="text" name="uArId" id="uArId" value="${Bean.UArId}" >
+                    </div>
+                </div>
+                <div class="layui-form-item">
                     <label class="layui-form-label">地址</label>
                     <div class="layui-input-block">
                         <input class="layui-input" type="text" name="uAddress" id="uAddress" value="${Bean.UAddress}" >

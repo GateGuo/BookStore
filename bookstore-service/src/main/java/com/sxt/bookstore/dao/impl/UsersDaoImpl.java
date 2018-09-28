@@ -22,6 +22,7 @@ public class UsersDaoImpl extends BaseDaoImpl<Users> implements UsersDao  {
                 "U_VIP_LEVEL," +
                 "U_ID_CARD," +
                 "U_NAME," +
+                "U_AR_ID," +
                 "U_ADDRESS," +
                 "U_PHONENUMBER," +
                 "U_ACCOUNT_BALANCE," +
@@ -29,6 +30,7 @@ public class UsersDaoImpl extends BaseDaoImpl<Users> implements UsersDao  {
                 "U_TOTAL_RECHARGE," +
                 "U_IS_SELLER" +
                 ") VALUE(" +
+                "?," +
                 "?," +
                 "?," +
                 "?," +
@@ -48,6 +50,7 @@ public class UsersDaoImpl extends BaseDaoImpl<Users> implements UsersDao  {
                 usersBean.getUVipLevel(),
                 usersBean.getUIdCard(),
                 usersBean.getUName(),
+                usersBean.getUArId(),
                 usersBean.getUAddress(),
                 usersBean.getUPhonenumber(),
                 usersBean.getUAccountBalance(),
@@ -68,6 +71,7 @@ public class UsersDaoImpl extends BaseDaoImpl<Users> implements UsersDao  {
                 "U_VIP_LEVEL = ?," +
                 "U_ID_CARD = ?," +
                 "U_NAME = ?," +
+                "U_AR_ID = ?," +
                 "U_ADDRESS = ?," +
                 "U_PHONENUMBER = ?," +
                 "U_ACCOUNT_BALANCE = ?," +
@@ -82,6 +86,7 @@ public class UsersDaoImpl extends BaseDaoImpl<Users> implements UsersDao  {
                 usersBean.getUVipLevel(),
                 usersBean.getUIdCard(),
                 usersBean.getUName(),
+                usersBean.getUArId(),
                 usersBean.getUAddress(),
                 usersBean.getUPhonenumber(),
                 usersBean.getUAccountBalance(),

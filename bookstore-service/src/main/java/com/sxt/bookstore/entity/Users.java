@@ -7,11 +7,11 @@ package com.sxt.bookstore.entity;
  * 用户表(USERS)
  * 
  * @author Q2665_yubiums
- * @version 1.0.0 2018-09-27
+ * @version 1.0.0 2018-09-28
  */
 public class Users implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = -101522732093084048L;
+    private static final long serialVersionUID = 1564036633035143421L;
 
     /** 用户id */
     private Integer uId;
@@ -30,6 +30,9 @@ public class Users implements java.io.Serializable {
 
     /** 姓名 */
     private String uName;
+
+    /** 省市区id */
+    private Integer uArId;
 
     /** 地址 */
     private String uAddress;
@@ -164,6 +167,25 @@ public class Users implements java.io.Serializable {
     }
     
     /**
+     * 获取省市区id
+     * 
+     * @return 省市区id
+     */
+    public Integer getUArId() {
+        return this.uArId;
+    }
+    
+    /**
+     * 设置省市区id
+     * 
+     * @param uArId
+     *          省市区id
+     */
+    public void setUArId(Integer uArId) {
+        this.uArId = uArId;
+    }
+    
+    /**
      * 获取地址
      * 
      * @return 地址
@@ -275,23 +297,5 @@ public class Users implements java.io.Serializable {
      */
     public void setUIsSeller(Integer uIsSeller) {
         this.uIsSeller = uIsSeller;
-    }
-
-    @Override
-    public String toString() {
-        return "Users{" +
-                "uId=" + uId +
-                ", uUsername='" + uUsername + '\'' +
-                ", uPassword='" + uPassword + '\'' +
-                ", uVipLevel=" + uVipLevel +
-                ", uIdCard='" + uIdCard + '\'' +
-                ", uName='" + uName + '\'' +
-                ", uAddress='" + uAddress + '\'' +
-                ", uPhonenumber='" + uPhonenumber + '\'' +
-                ", uAccountBalance=" + uAccountBalance +
-                ", uSalesBalance=" + uSalesBalance +
-                ", uTotalRecharge=" + uTotalRecharge +
-                ", uIsSeller=" + uIsSeller +
-                '}';
     }
 }
