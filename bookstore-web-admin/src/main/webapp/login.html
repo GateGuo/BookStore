@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./layui/css/layui.css"/>
+    <script src="./layui/layui.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+<body style="background-color: #ededed">
+
+<div class="layui-container">
+    <div class="layui-row">
+        <div class="layui-card" style="margin-top: 50px;">
+            <div class="layui-card-header" style="text-align: center;">登录</div>
+            <div class="layui-card-body">
+                <form action="/admin?method=login" method="post" class="layui-form layui-form-pane">
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">用户名</label>
+                        <div class="layui-input-block">
+                            <input class="layui-input" required type="text" name="aUsername" id="aUsername">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">密码</label>
+                        <div class="layui-input-block">
+                            <input class="layui-input" required type="text" name="aPassword" id="aPassword">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <div class="layui-input-block">
+                            <!--<button class="layui-input" lay-submit="" lay-filter="submit">Submit</button>-->
+                            <input type="submit" class="layui-input layui-bg-blue" value="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -24,8 +24,12 @@ public class OldBooksDaoImpl extends BaseDaoImpl<OldBooks> implements OldBooksDa
                 "OB_DESCRIPTION," +
                 "OB_TYPE_ID," +
                 "OB_SELLER_ID," +
-                "OB_TIME" +
+                "OB_TIME," +
+                "OB_SALES_VOLUME," +
+                "OB_IMG_NAME" +
                 ") VALUE(" +
+                "?," +
+                "?," +
                 "?," +
                 "?," +
                 "?," +
@@ -44,7 +48,9 @@ public class OldBooksDaoImpl extends BaseDaoImpl<OldBooks> implements OldBooksDa
                 old_booksBean.getObDescription(),
                 old_booksBean.getObTypeId(),
                 old_booksBean.getObSellerId(),
-                old_booksBean.getObTime()
+                old_booksBean.getObTime(),
+                old_booksBean.getObSalesVolume(),
+                old_booksBean.getObImgName()
         };
         boolean flag = dml(sql, params);
 
@@ -61,7 +67,9 @@ public class OldBooksDaoImpl extends BaseDaoImpl<OldBooks> implements OldBooksDa
                 "OB_DESCRIPTION = ?," +
                 "OB_TYPE_ID = ?," +
                 "OB_SELLER_ID = ?," +
-                "OB_TIME = ? " +
+                "OB_TIME = ?," +
+                "OB_SALES_VOLUME = ?," +
+                "OB_IMG_NAME = ? " +
                 " WHERE OB_ID = ?";
 
         Object[] params = {
@@ -73,6 +81,8 @@ public class OldBooksDaoImpl extends BaseDaoImpl<OldBooks> implements OldBooksDa
                 old_booksBean.getObTypeId(),
                 old_booksBean.getObSellerId(),
                 old_booksBean.getObTime(),
+                old_booksBean.getObSalesVolume(),
+                old_booksBean.getObImgName(),
                 old_booksBean.getObId()
 
         };

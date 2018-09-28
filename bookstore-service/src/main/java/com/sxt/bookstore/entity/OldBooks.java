@@ -7,11 +7,11 @@ import java.util.Date;
  * 二手图书表(OLD_BOOKS)
  * 
  * @author Q2665_yubiums
- * @version 1.0.0 2018-09-27
+ * @version 1.0.0 2018-09-28
  */
 public class OldBooks implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = 1879438300077615686L;
+    private static final long serialVersionUID = 5270072907402168457L;
 
     /** 二手书籍id */
     private Integer obId;
@@ -39,6 +39,12 @@ public class OldBooks implements java.io.Serializable {
 
     /** 上架时间 */
     private Date obTime;
+
+    /** 销量 */
+    private Integer obSalesVolume;
+
+    /** 图片名 */
+    private String obImgName;
     
     /**
      * 获取二手书籍id
@@ -209,5 +215,43 @@ public class OldBooks implements java.io.Serializable {
      */
     public void setObTime(Date obTime) {
         this.obTime = obTime;
+    }
+    
+    /**
+     * 获取销量
+     * 
+     * @return 销量
+     */
+    public Integer getObSalesVolume() {
+        return this.obSalesVolume;
+    }
+    
+    /**
+     * 设置销量
+     * 
+     * @param obSalesVolume
+     *          销量
+     */
+    public void setObSalesVolume(Integer obSalesVolume) {
+        this.obSalesVolume = obSalesVolume;
+    }
+    
+    /**
+     * 获取图片名
+     * 
+     * @return 图片名
+     */
+    public String getObImgName() {
+        return this.obImgName;
+    }
+    
+    /**
+     * 设置图片名
+     * 
+     * @param obImgName
+     *          图片名
+     */
+    public void setObImgName(String obImgName) {
+        this.obImgName = obImgName;
     }
 }

@@ -10,8 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <title>大学信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href=".../layui/css/layui.css"/>
 </head>
 <body>
 
@@ -23,7 +22,7 @@
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
-<script src="/layui/layui.js"></script>
+<script type="text/javascript" src="./layui/layui.js"></script>
 <script>
     layui.use(['table','layer'], function(){
         var table = layui.table;
@@ -33,7 +32,7 @@
         table.render({
             elem: '#demo'
             ,height: 362
-            ,url: '' //数据接口
+            ,url: '/user?method=Show' //数据接口
             ,page: true //开启分页
             ,cellMinWidth: 80
             ,toolbar: 'default'

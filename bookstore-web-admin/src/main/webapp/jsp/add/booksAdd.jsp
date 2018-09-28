@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
-  Date: 2018-09-27
-  Time: 19:32:17
+  Date: 2018-09-28
+  Time: 15:54:06
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -65,6 +65,12 @@
                     <label class="layui-form-label">销量</label>
                     <div class="layui-input-block">
                         <input class="layui-input" type="text" name="bSalesVolume" id="bSalesVolume">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">图片名</label>
+                    <div class="layui-input-block">
+                        <input class="layui-input" type="text" name="bImgName" id="bImgName">
                     </div>
                 </div>
                 <div class="layui-form-item">

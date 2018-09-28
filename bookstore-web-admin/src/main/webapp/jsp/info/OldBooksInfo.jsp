@@ -50,6 +50,8 @@
                 ,{field: 'obTypeId', title: '分类id'}
                 ,{field: 'obSellerId', title: '卖家id'}
                 ,{field: 'obTime', title: '上架时间'}
+                ,{field: 'obSalesVolume', title: '销量'}
+                ,{field: 'obImgName', title: '图片名'}
                 ,{fixed: 'right', width: 120, align:'center', toolbar: '#barDemo'}
             ]]
             ,response: {

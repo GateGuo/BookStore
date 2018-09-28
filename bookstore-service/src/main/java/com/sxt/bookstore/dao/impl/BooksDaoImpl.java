@@ -24,8 +24,10 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
                 "B_DESCRIPTION," +
                 "B_T_ID," +
                 "B_UP_TIME," +
-                "B_SALES_VOLUME" +
+                "B_SALES_VOLUME," +
+                "B_IMG_NAME" +
                 ") VALUE(" +
+                "?," +
                 "?," +
                 "?," +
                 "?," +
@@ -44,7 +46,8 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
                 booksBean.getBDescription(),
                 booksBean.getBTId(),
                 booksBean.getBUpTime(),
-                booksBean.getBSalesVolume()
+                booksBean.getBSalesVolume(),
+                booksBean.getBImgName()
         };
         boolean flag = dml(sql, params);
 
@@ -61,7 +64,8 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
                 "B_DESCRIPTION = ?," +
                 "B_T_ID = ?," +
                 "B_UP_TIME = ?," +
-                "B_SALES_VOLUME = ? " +
+                "B_SALES_VOLUME = ?," +
+                "B_IMG_NAME = ? " +
                 " WHERE B_ID = ?";
 
         Object[] params = {
@@ -73,6 +77,7 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
                 booksBean.getBTId(),
                 booksBean.getBUpTime(),
                 booksBean.getBSalesVolume(),
+                booksBean.getBImgName(),
                 booksBean.getBId()
 
         };

@@ -7,11 +7,11 @@ import java.util.Date;
  * 图书表(BOOKS)
  * 
  * @author Q2665_yubiums
- * @version 1.0.0 2018-09-27
+ * @version 1.0.0 2018-09-28
  */
 public class Books implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = 874510483651027719L;
+    private static final long serialVersionUID = -4266961626900454248L;
 
     /** 书籍id */
     private Integer bId;
@@ -39,6 +39,9 @@ public class Books implements java.io.Serializable {
 
     /** 销量 */
     private Integer bSalesVolume;
+
+    /** 图片名 */
+    private String bImgName;
     
     /**
      * 获取书籍id
@@ -209,5 +212,24 @@ public class Books implements java.io.Serializable {
      */
     public void setBSalesVolume(Integer bSalesVolume) {
         this.bSalesVolume = bSalesVolume;
+    }
+    
+    /**
+     * 获取图片名
+     * 
+     * @return 图片名
+     */
+    public String getBImgName() {
+        return this.bImgName;
+    }
+    
+    /**
+     * 设置图片名
+     * 
+     * @param bImgName
+     *          图片名
+     */
+    public void setBImgName(String bImgName) {
+        this.bImgName = bImgName;
     }
 }
