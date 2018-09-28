@@ -4,18 +4,118 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css">
+    <style>
+        body{
+            font-family: "微软雅黑 Semibold";
+        }
+        #kind {
+            border-radius: 0;
+            padding: 0;
+            border: 0;
+        }
+        #kind .card-header{
+            padding: 0 20px;
+            line-height: 35px;
+            background-color: #a62f39;
+            border: 0;
+        }
+        #kind .card-body{
+            padding: 0;
+        }
+        #kind .card-body ul{
+            list-style-type: none;
+            padding-left: 0;
+        }
+        #kind .card-body ul li{
+            display: block;
+            padding-left: 20px;
+            border: 1px solid rgba(0,0,0,0.125);
+            border-bottom: 0;
+            height: 30px;
+            line-height: 30px;
+        }
+        #kind .card-body ul li span{
+            display: inline-block;
+            position: absolute;
+            right: 10px;
+        }
+        #kind .card-body ul li:last-child{
+            border-bottom: 1px solid rgba(0,0,0,0.125);
+        }
+        #kind .card-body ul li:hover{
+            cursor: pointer;
+            border: 2px solid #a62f39;
+            color: #a62f39;
+        }
+        #kind .card-body ul li a{
+            color: #000;
+        }
+        #kind .card-body ul li a:hover{
+            color: #a62f39;
+        }
+        .img-many{
+            height: 300px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
-<footer>
+<div id="b_body">
     <div class="container">
         <div class="row">
-            <div class="foo">
+            <div class="col-2">
+                <div class="card" id="kind">
+                    <div class="card-header">Lorem.</div>
+                    <div class="card-body">
+                        <ul>
+                            <li><a href="#">Lorem.</a><span>&gt;</span></li>
+                            <li><a href="#">Saepe?</a><span>&gt;</span></li>
+                            <li><a href="#">Quidem?</a><span>&gt;</span></li>
+                            <li><a href="#">Iure.</a><span>&gt;</span></li>
+                            <li><a href="#">Incidunt?</a></li>
+                            <li><a href="#">Perferendis!</a></li>
+                            <li><a href="#">Tempore?</a></li>
+                            <li><a href="#">Inventore.</a></li>
+                            <li><a href="#">Sequi.</a></li>
+                            <li><a href="#">Rem?</a></li>
+                            <li><a href="#">Voluptas?</a></li>
+                            <li><a href="#">Sequi?</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-header">Lorem.</div>
+                    <div class="card-body">
+                        <ul>
+                            <li><a href="#">Lorem.</a><span>&gt;</span></li>
+                            <li><a href="#">Saepe?</a><span>&gt;</span></li>
+                            <li><a href="#">Quidem?</a><span>&gt;</span></li>
+                            <li><a href="#">Iure.</a><span>&gt;</span></li>
+                            <li><a href="#">Incidunt?</a></li>
+                            <li><a href="#">Perferendis!</a></li>
+                            <li><a href="#">Tempore?</a></li>
+                            <li><a href="#">Inventore.</a></li>
+                            <li><a href="#">Sequi.</a></li>
+                            <li><a href="#">Rem?</a></li>
+                            <li><a href="#">Voluptas?</a></li>
+                            <li><a href="#">Sequi?</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="img-many bg-primary"></div>
+                <div class="">
 
+                </div>
             </div>
         </div>
     </div>
-</footer>
+</div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="./jquery/jquery.js"></script>
