@@ -188,4 +188,18 @@ public class Orders implements java.io.Serializable {
     public void setOrStatus(Integer orStatus) {
         this.orStatus = orStatus;
     }
+
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "orId=" + orId +
+                ", orNumber='" + orNumber + '\'' +
+                ", orUId=" + orUId +
+                ", orTotalPrice=" + orTotalPrice +
+                ", orPayPrice=" + orPayPrice +
+                ", orCreateTime=" + orCreateTime +
+                ", orFinishTime=" + orFinishTime +
+                ", orStatus=" + orStatus +
+                '}';
+    }
 }

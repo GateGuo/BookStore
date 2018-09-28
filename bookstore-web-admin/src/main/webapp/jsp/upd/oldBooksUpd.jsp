@@ -2,17 +2,20 @@
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
   Date: 2018-09-28
-  Time: 15:54:08
+  Time: 18:56:42
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; %>
+<base href="<%=basePath%>">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>增加二手图书表信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
 <div class="layui-container" style="margin-top: 10px;">
@@ -22,67 +25,67 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">二手书籍id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="obId" id="obId" value="${Bean.obId}" disabled>
+                        <input class="layui-input" type="text" name="obId" id="obId" value="${Bean.ObId}" disabled>
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">二手书名</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="obName" id="obName" value="${Bean.obName}" >
+                        <input class="layui-input" type="text" name="obName" id="obName" value="${Bean.ObName}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">二手书价格</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="obPrice" id="obPrice" value="${Bean.obPrice}" >
+                        <input class="layui-input" type="text" name="obPrice" id="obPrice" value="${Bean.ObPrice}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">库存</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="obCount" id="obCount" value="${Bean.obCount}" >
+                        <input class="layui-input" type="text" name="obCount" id="obCount" value="${Bean.ObCount}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">标签</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="obTag" id="obTag" value="${Bean.obTag}" >
+                        <input class="layui-input" type="text" name="obTag" id="obTag" value="${Bean.ObTag}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">描述</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="obDescription" id="obDescription" value="${Bean.obDescription}" >
+                        <input class="layui-input" type="text" name="obDescription" id="obDescription" value="${Bean.ObDescription}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">分类id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="obTypeId" id="obTypeId" value="${Bean.obTypeId}" >
+                        <input class="layui-input" type="text" name="obTypeId" id="obTypeId" value="${Bean.ObTypeId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">卖家id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="obSellerId" id="obSellerId" value="${Bean.obSellerId}" >
+                        <input class="layui-input" type="text" name="obSellerId" id="obSellerId" value="${Bean.ObSellerId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">上架时间</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="obTime" id="obTime" value="${Bean.obTime}" >
+                        <input class="layui-input" type="text" name="obTime" id="obTime" value="${Bean.ObTime}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">销量</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="obSalesVolume" id="obSalesVolume" value="${Bean.obSalesVolume}" >
+                        <input class="layui-input" type="text" name="obSalesVolume" id="obSalesVolume" value="${Bean.ObSalesVolume}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">图片名</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="obImgName" id="obImgName" value="${Bean.obImgName}" >
+                        <input class="layui-input" type="text" name="obImgName" id="obImgName" value="${Bean.ObImgName}" >
                     </div>
                 </div>
                 <div class="layui-form-item">

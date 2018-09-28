@@ -166,4 +166,17 @@ public class Comments implements java.io.Serializable {
     public void setCTime(Date cTime) {
         this.cTime = cTime;
     }
+
+    @Override
+    public String toString() {
+        return "Comments{" +
+                "cId=" + cId +
+                ", cBId=" + cBId +
+                ", cUId=" + cUId +
+                ", cParentId=" + cParentId +
+                ", cUTargetId=" + cUTargetId +
+                ", cContent='" + cContent + '\'' +
+                ", cTime=" + cTime +
+                '}';
+    }
 }

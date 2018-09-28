@@ -144,4 +144,16 @@ public class ShoppingCart implements java.io.Serializable {
     public void setScUpdatetimeTime(Date scUpdatetimeTime) {
         this.scUpdatetimeTime = scUpdatetimeTime;
     }
+
+    @Override
+    public String toString() {
+        return "ShoppingCart{" +
+                "scId=" + scId +
+                ", scUId=" + scUId +
+                ", scBId=" + scBId +
+                ", scNumber=" + scNumber +
+                ", scCreateTime=" + scCreateTime +
+                ", scUpdatetimeTime=" + scUpdatetimeTime +
+                '}';
+    }
 }

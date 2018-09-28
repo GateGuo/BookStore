@@ -100,4 +100,15 @@ public class Type implements java.io.Serializable {
     public void setTLevel(Integer tLevel) {
         this.tLevel = tLevel;
     }
+
+
+    @Override
+    public String toString() {
+        return "Type{" +
+                "tId=" + tId +
+                ", tName='" + tName + '\'' +
+                ", tParentId=" + tParentId +
+                ", tLevel=" + tLevel +
+                '}';
+    }
 }

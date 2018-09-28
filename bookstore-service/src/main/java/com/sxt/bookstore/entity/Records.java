@@ -122,4 +122,15 @@ public class Records implements java.io.Serializable {
     public void setRMark(Integer rMark) {
         this.rMark = rMark;
     }
+
+    @Override
+    public String toString() {
+        return "Records{" +
+                "rId=" + rId +
+                ", rUId=" + rUId +
+                ", rAId=" + rAId +
+                ", rMessage='" + rMessage + '\'' +
+                ", rMark=" + rMark +
+                '}';
+    }
 }

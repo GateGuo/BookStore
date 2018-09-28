@@ -2,17 +2,20 @@
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
   Date: 2018-09-28
-  Time: 15:54:08
+  Time: 18:56:42
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; %>
+<base href="<%=basePath%>">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>增加图书表信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
 <div class="layui-container" style="margin-top: 10px;">
@@ -22,61 +25,61 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">书籍id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="bId" id="bId" value="${Bean.bId}" disabled>
+                        <input class="layui-input" type="text" name="bId" id="bId" value="${Bean.BId}" disabled>
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">书名</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="bName" id="bName" value="${Bean.bName}" >
+                        <input class="layui-input" type="text" name="bName" id="bName" value="${Bean.BName}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">价格</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="bPrice" id="bPrice" value="${Bean.bPrice}" >
+                        <input class="layui-input" type="text" name="bPrice" id="bPrice" value="${Bean.BPrice}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">库存</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="bCount" id="bCount" value="${Bean.bCount}" >
+                        <input class="layui-input" type="text" name="bCount" id="bCount" value="${Bean.BCount}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">标签</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="bTag" id="bTag" value="${Bean.bTag}" >
+                        <input class="layui-input" type="text" name="bTag" id="bTag" value="${Bean.BTag}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">描述</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="bDescription" id="bDescription" value="${Bean.bDescription}" >
+                        <input class="layui-input" type="text" name="bDescription" id="bDescription" value="${Bean.BDescription}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">分类id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="bTId" id="bTId" value="${Bean.bTId}" >
+                        <input class="layui-input" type="text" name="bTId" id="bTId" value="${Bean.BTId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">上架时间</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="bUpTime" id="bUpTime" value="${Bean.bUpTime}" >
+                        <input class="layui-input" type="text" name="bUpTime" id="bUpTime" value="${Bean.BUpTime}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">销量</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="bSalesVolume" id="bSalesVolume" value="${Bean.bSalesVolume}" >
+                        <input class="layui-input" type="text" name="bSalesVolume" id="bSalesVolume" value="${Bean.BSalesVolume}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">图片名</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="bImgName" id="bImgName" value="${Bean.bImgName}" >
+                        <input class="layui-input" type="text" name="bImgName" id="bImgName" value="${Bean.BImgName}" >
                     </div>
                 </div>
                 <div class="layui-form-item">

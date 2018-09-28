@@ -1,18 +1,21 @@
 <%--
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
-  Date: 2018-09-27
-  Time: 19:32:18
+  Date: 2018-09-28
+  Time: 18:56:42
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<% String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; %>
+<base href="<%=basePath%>">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>增加用户表信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
 <div class="layui-container" style="margin-top: 10px;">
@@ -22,73 +25,73 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uId" id="uId" value="${Bean.uId}" disabled>
+                        <input class="layui-input" type="text" name="uId" id="uId" value="${Bean.UId}" disabled>
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户名</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uUsername" id="uUsername" value="${Bean.uUsername}" >
+                        <input class="layui-input" type="text" name="uUsername" id="uUsername" value="${Bean.UUsername}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">密码</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uPassword" id="uPassword" value="${Bean.uPassword}" >
+                        <input class="layui-input" type="text" name="uPassword" id="uPassword" value="${Bean.UPassword}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">会员等级</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uVipLevel" id="uVipLevel" value="${Bean.uVipLevel}" >
+                        <input class="layui-input" type="text" name="uVipLevel" id="uVipLevel" value="${Bean.UVipLevel}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">身份证</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uIdCard" id="uIdCard" value="${Bean.uIdCard}" >
+                        <input class="layui-input" type="text" name="uIdCard" id="uIdCard" value="${Bean.UIdCard}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">姓名</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uName" id="uName" value="${Bean.uName}" >
+                        <input class="layui-input" type="text" name="uName" id="uName" value="${Bean.UName}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">地址</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uAddress" id="uAddress" value="${Bean.uAddress}" >
+                        <input class="layui-input" type="text" name="uAddress" id="uAddress" value="${Bean.UAddress}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">手机号码</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uPhonenumber" id="uPhonenumber" value="${Bean.uPhonenumber}" >
+                        <input class="layui-input" type="text" name="uPhonenumber" id="uPhonenumber" value="${Bean.UPhonenumber}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">账户余额</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uAccountBalance" id="uAccountBalance" value="${Bean.uAccountBalance}" >
+                        <input class="layui-input" type="text" name="uAccountBalance" id="uAccountBalance" value="${Bean.UAccountBalance}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">销售余额</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uSalesBalance" id="uSalesBalance" value="${Bean.uSalesBalance}" >
+                        <input class="layui-input" type="text" name="uSalesBalance" id="uSalesBalance" value="${Bean.USalesBalance}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">总共充值金额</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uTotalRecharge" id="uTotalRecharge" value="${Bean.uTotalRecharge}" >
+                        <input class="layui-input" type="text" name="uTotalRecharge" id="uTotalRecharge" value="${Bean.UTotalRecharge}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">是否卖家</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="uIsSeller" id="uIsSeller" value="${Bean.uIsSeller}" >
+                        <input class="layui-input" type="checkbox" lay-skin="switch" name="uIsSeller" id="uIsSeller" lay-text="ON|OFF"  >
                     </div>
                 </div>
                 <div class="layui-form-item">
@@ -106,6 +109,12 @@
         var layer = layui.layer;
         var form = layui.form;
         var $ = layui.jquery;
+
+        let value = "${Bean.UIsSeller}";
+        if (value === '1') {
+            $('#uIsSeller').attr('checked','checked');
+            form.render();
+        }
 
         form.on('submit(*)', function (data) {
             $.get('', data.field, function (msg) {

@@ -254,4 +254,21 @@ public class OldBooks implements java.io.Serializable {
     public void setObImgName(String obImgName) {
         this.obImgName = obImgName;
     }
+
+    @Override
+    public String toString() {
+        return "OldBooks{" +
+                "obId=" + obId +
+                ", obName='" + obName + '\'' +
+                ", obPrice=" + obPrice +
+                ", obCount=" + obCount +
+                ", obTag='" + obTag + '\'' +
+                ", obDescription='" + obDescription + '\'' +
+                ", obTypeId=" + obTypeId +
+                ", obSellerId=" + obSellerId +
+                ", obTime=" + obTime +
+                ", obSalesVolume=" + obSalesVolume +
+                ", obImgName='" + obImgName + '\'' +
+                '}';
+    }
 }

@@ -1,18 +1,21 @@
 <%--
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
-  Date: 2018-09-27
-  Time: 19:32:18
+  Date: 2018-09-28
+  Time: 18:56:42
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; %>
+<base href="<%=basePath%>">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>增加评论表信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
 <div class="layui-container" style="margin-top: 10px;">
@@ -22,43 +25,43 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">评论id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="cId" id="cId" value="${Bean.cId}" disabled>
+                        <input class="layui-input" type="text" name="cId" id="cId" value="${Bean.CId}" disabled>
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">商品id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="cBId" id="cBId" value="${Bean.cBId}" >
+                        <input class="layui-input" type="text" name="cBId" id="cBId" value="${Bean.CBId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="cUId" id="cUId" value="${Bean.cUId}" >
+                        <input class="layui-input" type="text" name="cUId" id="cUId" value="${Bean.CUId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">父评论id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="cParentId" id="cParentId" value="${Bean.cParentId}" >
+                        <input class="layui-input" type="text" name="cParentId" id="cParentId" value="${Bean.CParentId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">回复目标id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="cUTargetId" id="cUTargetId" value="${Bean.cUTargetId}" >
+                        <input class="layui-input" type="text" name="cUTargetId" id="cUTargetId" value="${Bean.CUTargetId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">评论内容</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="cContent" id="cContent" value="${Bean.cContent}" >
+                        <input class="layui-input" type="text" name="cContent" id="cContent" value="${Bean.CContent}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">评论时间</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="cTime" id="cTime" value="${Bean.cTime}" >
+                        <input class="layui-input" type="text" name="cTime" id="cTime" value="${Bean.CTime}" >
                     </div>
                 </div>
                 <div class="layui-form-item">

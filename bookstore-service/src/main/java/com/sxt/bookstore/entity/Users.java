@@ -276,4 +276,22 @@ public class Users implements java.io.Serializable {
     public void setUIsSeller(Integer uIsSeller) {
         this.uIsSeller = uIsSeller;
     }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "uId=" + uId +
+                ", uUsername='" + uUsername + '\'' +
+                ", uPassword='" + uPassword + '\'' +
+                ", uVipLevel=" + uVipLevel +
+                ", uIdCard='" + uIdCard + '\'' +
+                ", uName='" + uName + '\'' +
+                ", uAddress='" + uAddress + '\'' +
+                ", uPhonenumber='" + uPhonenumber + '\'' +
+                ", uAccountBalance=" + uAccountBalance +
+                ", uSalesBalance=" + uSalesBalance +
+                ", uTotalRecharge=" + uTotalRecharge +
+                ", uIsSeller=" + uIsSeller +
+                '}';
+    }
 }

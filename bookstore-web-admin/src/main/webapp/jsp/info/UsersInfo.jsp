@@ -1,4 +1,4 @@
-<%--
+<%@ page import="jdk.nashorn.internal.ir.RuntimeNode" %><%--
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
   Date: 2018/9/14 0014
@@ -6,14 +6,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; %>
+<base href="<%=basePath%>">
 <html>
 <head>
     <meta charset="UTF-8">
     <title>大学信息</title>
-    <link rel="stylesheet" type="text/css" media="screen" href=".../layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
-
 <table id="demo" lay-filter="test"></table>
 
 <script type="text/html" id="barDemo">
@@ -22,7 +24,7 @@
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
-<script type="text/javascript" src="./layui/layui.js"></script>
+<script type="text/javascript" src="layui/layui.js"></script>
 <script>
     layui.use(['table','layer'], function(){
         var table = layui.table;
@@ -31,11 +33,11 @@
         //第一个实例
         table.render({
             elem: '#demo'
-            ,height: 362
-            ,url: '/user?method=Show' //数据接口
+            ,height: 450
+            ,url: 'users?method=Show' //数据接口
             ,page: true //开启分页
             ,cellMinWidth: 80
-            ,toolbar: 'default'
+            ,toolbar: true
             ,size: 'sm'
             ,even: true
             ,cols: [[ //表头
@@ -52,12 +54,13 @@
                 ,{field: 'uSalesBalance', title: '销售余额'}
                 ,{field: 'uTotalRecharge', title: '总共充值金额'}
                 ,{field: 'uIsSeller', title: '是否卖家'}
-                ,{fixed: 'right', width: 120, align:'center', toolbar: '#barDemo'}
+                ,{fixed: 'right',title: '操作', width: 120, align:'center', toolbar: '#barDemo'}
             ]]
             ,response: {
                 statusCode: 200 //重新规定成功的状态码为 200，table 组件默认为 0
             }
             ,parseData: function(res){ //将原始数据解析成 table 组件所规定的数据, todo 根据实际填写
+                console.log(res.data);
                 return {
                     "code": res.code, //解析接口状态
                     "msg": res.msg, //解析提示文本
@@ -74,8 +77,8 @@
                 case 'add':
                     layer.open({
                         type: 2,
-                        area: ['550px', '350px'],
-                        content: 'AddUniversity.html' //这里content是一个普通的url,todo 根据实际填写
+                        area: ['450px', '350px'],
+                        content: 'jsp/add/usersAdd.jsp' //这里content是一个普通的url,todo 根据实际填写
                     });
                     break;
                 case 'update':
@@ -118,8 +121,8 @@
                 // layer.alert('编辑 [id]：'+ data.universityNo);
                 layer.open({
                     type: 2,
-                    area: ['550px', '350px'],
-                    content: '/upduniversity?universityNo='+data.universityNo//todo 根据实际填写
+                    area: ['550px', '450px'],
+                    content: 'users?method=EditGet&uId='+data.uId//todo 根据实际填写
                 });
             }
         });

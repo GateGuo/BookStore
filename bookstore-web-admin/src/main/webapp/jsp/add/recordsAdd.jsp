@@ -1,18 +1,21 @@
 <%--
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
-  Date: 2018-09-27
-  Time: 19:32:17
+  Date: 2018-09-28
+  Time: 16:08:43
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; %>
+<base href="<%=basePath%>">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>增加咨询记录表信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
 <div class="layui-container" style="margin-top: 10px;">

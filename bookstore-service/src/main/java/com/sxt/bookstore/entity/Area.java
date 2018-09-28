@@ -99,4 +99,14 @@ public class Area implements java.io.Serializable {
     public void setArParentId(Integer arParentId) {
         this.arParentId = arParentId;
     }
+
+    @Override
+    public String toString() {
+        return "Area{" +
+                "arId=" + arId +
+                ", arName='" + arName + '\'' +
+                ", arLevel=" + arLevel +
+                ", arParentId=" + arParentId +
+                '}';
+    }
 }

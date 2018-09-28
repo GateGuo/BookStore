@@ -1,18 +1,21 @@
 <%--
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
-  Date: 2018-09-27
-  Time: 19:32:18
+  Date: 2018-09-28
+  Time: 18:56:42
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; %>
+<base href="<%=basePath%>">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>增加订单表信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
 <div class="layui-container" style="margin-top: 10px;">
@@ -22,49 +25,49 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">订单id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orId" id="orId" value="${Bean.orId}" disabled>
+                        <input class="layui-input" type="text" name="orId" id="orId" value="${Bean.OrId}" disabled>
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">订单编号</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orNumber" id="orNumber" value="${Bean.orNumber}" >
+                        <input class="layui-input" type="text" name="orNumber" id="orNumber" value="${Bean.OrNumber}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orUId" id="orUId" value="${Bean.orUId}" >
+                        <input class="layui-input" type="text" name="orUId" id="orUId" value="${Bean.OrUId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">总金额</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orTotalPrice" id="orTotalPrice" value="${Bean.orTotalPrice}" >
+                        <input class="layui-input" type="text" name="orTotalPrice" id="orTotalPrice" value="${Bean.OrTotalPrice}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">支付金额</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orPayPrice" id="orPayPrice" value="${Bean.orPayPrice}" >
+                        <input class="layui-input" type="text" name="orPayPrice" id="orPayPrice" value="${Bean.OrPayPrice}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">订单生成时间</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orCreateTime" id="orCreateTime" value="${Bean.orCreateTime}" >
+                        <input class="layui-input" type="text" name="orCreateTime" id="orCreateTime" value="${Bean.OrCreateTime}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">订单完成时间</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orFinishTime" id="orFinishTime" value="${Bean.orFinishTime}" >
+                        <input class="layui-input" type="text" name="orFinishTime" id="orFinishTime" value="${Bean.OrFinishTime}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">订单状态</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="orStatus" id="orStatus" value="${Bean.orStatus}" >
+                        <input class="layui-input" type="text" name="orStatus" id="orStatus" value="${Bean.OrStatus}" >
                     </div>
                 </div>
                 <div class="layui-form-item">

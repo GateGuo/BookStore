@@ -23,7 +23,8 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
     {
         try {
-            baseDao = Mapping.getDaoMap().get(tClass.getName()).newInstance();
+            System.out.println(tClass.getSimpleName());
+            baseDao = Mapping.getDaoMap().get(tClass.getSimpleName()).newInstance();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {

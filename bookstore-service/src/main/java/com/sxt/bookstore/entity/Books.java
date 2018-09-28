@@ -232,4 +232,20 @@ public class Books implements java.io.Serializable {
     public void setBImgName(String bImgName) {
         this.bImgName = bImgName;
     }
+
+    @Override
+    public String toString() {
+        return "Books{" +
+                "bId=" + bId +
+                ", bName='" + bName + '\'' +
+                ", bPrice=" + bPrice +
+                ", bCount=" + bCount +
+                ", bTag='" + bTag + '\'' +
+                ", bDescription='" + bDescription + '\'' +
+                ", bTId=" + bTId +
+                ", bUpTime=" + bUpTime +
+                ", bSalesVolume=" + bSalesVolume +
+                ", bImgName='" + bImgName + '\'' +
+                '}';
+    }
 }

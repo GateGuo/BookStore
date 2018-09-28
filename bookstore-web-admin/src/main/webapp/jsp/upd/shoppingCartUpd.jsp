@@ -1,18 +1,21 @@
 <%--
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
-  Date: 2018-09-27
-  Time: 19:32:18
+  Date: 2018-09-28
+  Time: 18:56:42
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; %>
+<base href="<%=basePath%>">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>增加购物车表信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
 <div class="layui-container" style="margin-top: 10px;">
@@ -22,37 +25,37 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="scId" id="scId" value="${Bean.scId}" disabled>
+                        <input class="layui-input" type="text" name="scId" id="scId" value="${Bean.ScId}" disabled>
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="scUId" id="scUId" value="${Bean.scUId}" >
+                        <input class="layui-input" type="text" name="scUId" id="scUId" value="${Bean.ScUId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">商品id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="scBId" id="scBId" value="${Bean.scBId}" >
+                        <input class="layui-input" type="text" name="scBId" id="scBId" value="${Bean.ScBId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">商品数量</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="scNumber" id="scNumber" value="${Bean.scNumber}" >
+                        <input class="layui-input" type="text" name="scNumber" id="scNumber" value="${Bean.ScNumber}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">生成日期</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="scCreateTime" id="scCreateTime" value="${Bean.scCreateTime}" >
+                        <input class="layui-input" type="text" name="scCreateTime" id="scCreateTime" value="${Bean.ScCreateTime}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">更新日期</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="scUpdatetimeTime" id="scUpdatetimeTime" value="${Bean.scUpdatetimeTime}" >
+                        <input class="layui-input" type="text" name="scUpdatetimeTime" id="scUpdatetimeTime" value="${Bean.ScUpdatetimeTime}" >
                     </div>
                 </div>
                 <div class="layui-form-item">

@@ -100,4 +100,14 @@ public class Admins implements java.io.Serializable {
     public void setALevel(Integer aLevel) {
         this.aLevel = aLevel;
     }
+
+    @Override
+    public String toString() {
+        return "Admins{" +
+                "aId=" + aId +
+                ", aUsername='" + aUsername + '\'' +
+                ", aPassword='" + aPassword + '\'' +
+                ", aLevel=" + aLevel +
+                '}';
+    }
 }

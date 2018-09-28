@@ -15,6 +15,13 @@ import java.util.List;
  * @author Q2665_yubiums
  */
 public abstract class BaseDaoImpl<T> implements BaseDao<T> {
+
+    // 创建一个BeanProcessor对象
+    // GenerousBeanProcessor 仅仅重写了父类BeanProcessor的mapColumnsToProperties方法
+    private BeanProcessor bean = new GenerousBeanProcessor();
+    // 将GenerousBeanProcessor对象传递给BasicRowProcessor
+    private RowProcessor processor = new BasicRowProcessor(bean);
+
     /**
      * 使用Druid连接池
      */
@@ -38,10 +45,10 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
 
         if (params.length == 0) {
             list = queryRunner.query(sql,
-                    new BeanListHandler<>(tClass));
+                    new BeanListHandler<>(tClass, processor));
         } else {
             list = queryRunner.query(sql,
-                    new BeanListHandler<>(tClass),
+                    new BeanListHandler<>(tClass, processor),
                     params);
         }
 
@@ -58,11 +65,11 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
      */
     protected T dqlGetSingle(String sql, Object[] params) throws SQLException {
 
-        // 创建一个BeanProcessor对象
-        // GenerousBeanProcessor 仅仅重写了父类BeanProcessor的mapColumnsToProperties方法
-        BeanProcessor bean = new GenerousBeanProcessor();
-        // 将GenerousBeanProcessor对象传递给BasicRowProcessor
-        RowProcessor processor = new BasicRowProcessor(bean);
+//        // 创建一个BeanProcessor对象
+//        // GenerousBeanProcessor 仅仅重写了父类BeanProcessor的mapColumnsToProperties方法
+//        BeanProcessor bean = new GenerousBeanProcessor();
+//        // 将GenerousBeanProcessor对象传递给BasicRowProcessor
+//        RowProcessor processor = new BasicRowProcessor(bean);
 
         T t = queryRunner.query(sql,
                 new BeanHandler<>(tClass, processor),

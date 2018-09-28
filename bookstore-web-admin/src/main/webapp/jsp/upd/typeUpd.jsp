@@ -1,18 +1,21 @@
 <%--
   Created by IntelliJ IDEA.
   User: Q2665_yubiums
-  Date: 2018-09-27
-  Time: 19:32:18
+  Date: 2018-09-28
+  Time: 18:56:42
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; %>
+<base href="<%=basePath%>">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>增加图书类别表信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
 <div class="layui-container" style="margin-top: 10px;">
@@ -22,25 +25,25 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">类别id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="tId" id="tId" value="${Bean.tId}" disabled>
+                        <input class="layui-input" type="text" name="tId" id="tId" value="${Bean.TId}" disabled>
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">分类名称</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="tName" id="tName" value="${Bean.tName}" >
+                        <input class="layui-input" type="text" name="tName" id="tName" value="${Bean.TName}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">父类id</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="tParentId" id="tParentId" value="${Bean.tParentId}" >
+                        <input class="layui-input" type="text" name="tParentId" id="tParentId" value="${Bean.TParentId}" >
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">分类级别</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="tLevel" id="tLevel" value="${Bean.tLevel}" >
+                        <input class="layui-input" type="text" name="tLevel" id="tLevel" value="${Bean.TLevel}" >
                     </div>
                 </div>
                 <div class="layui-form-item">

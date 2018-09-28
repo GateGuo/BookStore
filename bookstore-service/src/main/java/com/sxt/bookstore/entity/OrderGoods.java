@@ -100,4 +100,14 @@ public class OrderGoods implements java.io.Serializable {
     public void setOgPrice(Double ogPrice) {
         this.ogPrice = ogPrice;
     }
+
+    @Override
+    public String toString() {
+        return "OrderGoods{" +
+                "ogId=" + ogId +
+                ", ogOrId=" + ogOrId +
+                ", ogNumber=" + ogNumber +
+                ", ogPrice=" + ogPrice +
+                '}';
+    }
 }
