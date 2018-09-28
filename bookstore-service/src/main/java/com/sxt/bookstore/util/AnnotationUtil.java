@@ -24,7 +24,6 @@ public class AnnotationUtil {
 
         classs.forEach(classPath ->{
             try {
-//                System.out.println(classPath);
                 Class<?> aClass = Class.forName(classPath);
                 if (aClass.getSuperclass().equals(BaseDaoImpl.class)) {
                     Dao dao = aClass.getAnnotation(Dao.class);
@@ -48,11 +47,8 @@ public class AnnotationUtil {
 
         URL url = Thread.currentThread().getContextClassLoader().getResource(basePath);
 
-        System.out.println(url.getPath());
 
         File file = new File(url.getPath());
-
-        System.out.println(file.getName());
 
         //获取class路径
         String[] fileNameList = file.list((dir, name) -> {
