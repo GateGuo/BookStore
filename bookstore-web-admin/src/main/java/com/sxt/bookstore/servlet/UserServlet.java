@@ -73,12 +73,20 @@ public class UserServlet extends BaseServlet {
             usersPage.getPageData().forEach(bean -> {
                 try {
                     Area area = areaService.getOneByPrimaryKey(bean.getUArId());
+
                     Area city = areaService.getCityByCountyParentId(area.getArParentId());
-                    Area pro = areaService.getProByCityParentId(city.getArParentId());
-                    bean.setuAr(pro.getArName() + "/"
-                            + city.getArName() + "/"
-                            + area.getArName()
-                    );
+
+                    StringBuilder pca = new StringBuilder();
+                    Area pro;
+                    if (city == null) {
+                        pro = areaService.getProByCountryParentId(area.getArParentId());
+                        pca.append(pro.getArName() + "/" + area.getArName());
+                    } else {
+                        pro = areaService.getProByCityParentId(city.getArParentId());
+                        pca.append(pro.getArName() + "/" + city.getArName() + "/" + area.getArName());
+                    }
+
+                    bean.setuAr(pca.toString());
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }

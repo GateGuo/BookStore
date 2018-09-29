@@ -53,4 +53,12 @@ public class AreaServiceImpl extends BaseServiceImpl<Area> implements AreaServic
     public Area getProByCityParentId(int id) throws SQLException {
         return areaDao.getProByCityParentId(id);
     }
+
+    @Override
+    public Area getProByCountryParentId(Integer arParentId) throws SQLException {
+        if (arParentId != null) {
+            return areaDao.getProByCountryParentId(arParentId);
+        }
+        return null;
+    }
 }

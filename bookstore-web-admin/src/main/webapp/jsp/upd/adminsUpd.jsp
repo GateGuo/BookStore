@@ -81,6 +81,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     let index = parent.layer.getFrameIndex(window.name);
                     setTimeout(function () {
                         parent.layer.close(index);
+                        parent.location.reload();
                     }, 1000);
                 } else if (msg === 'fail') {
                     layer.msg('更新失败');

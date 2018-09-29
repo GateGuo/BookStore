@@ -160,4 +160,14 @@ public class AreaDaoImpl extends BaseDaoImpl<Area> implements AreaDao {
 
         return area;
     }
+
+    @Override
+    public Area getProByCountryParentId(Integer arParentId) throws SQLException {
+        String sql = "SELECT * FROM AREA WHERE AR_LEVEL = 1 AND AR_ID = ?";
+
+        Object[] params = {arParentId};
+        Area area = dqlGetSingle(sql, params);
+
+        return area;
+    }
 }

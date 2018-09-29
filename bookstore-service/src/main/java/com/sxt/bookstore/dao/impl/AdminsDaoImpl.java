@@ -110,4 +110,14 @@ public class AdminsDaoImpl extends BaseDaoImpl<Admins> implements AdminsDao  {
 
         return count;
     }
+
+    @Override
+    public Admins login(Admins admins) throws SQLException {
+        String sql = "SELECT * FROM `ADMINS` WHERE A_USERNAME = ? AND A_PASSWORD = ?";
+
+        Object[] params = {admins.getAUsername(), admins.getAPassword()};
+        Admins admin = dqlGetSingle(sql, params);
+
+        return admin;
+    }
 }

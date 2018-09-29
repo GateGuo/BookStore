@@ -16,6 +16,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
+<div class="layui-table-tool-temp" hidden id="he-bar">
+    <div class="layui-inline" lay-event="refresh">
+        <i class="layui-icon layui-icon-refresh"></i>
+    </div>
+</div>
+
 <table id="demo" lay-filter="test"></table>
 
 <script type="text/html" id="barDemo">
@@ -31,6 +37,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         var layer = layui.layer;
         var $ = layui.jquery;
 
+
+
+
         //第一个实例
         table.render({
             elem: '#demo'
@@ -38,12 +47,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             ,url: 'users?method=Show' //数据接口
             ,page: true //开启分页
             ,cellMinWidth: 80
-            ,toolbar: true
+            ,toolbar: '#he-bar'
             ,size: 'sm'
             ,even: true
             ,cols: [[ //表头
-                // { type:'checkbox', fixed: 'left'}
-                {field: 'uId', title: '用户id',  sort: true, fixed: 'left'}
+                { type:'checkbox', fixed: 'left'}
+                ,{field: 'uId', title: '用户id',  sort: true, fixed: 'left'}
                 ,{field: 'uUsername', title: '用户名'}
                 ,{field: 'uPassword', title: '密码'}
                 ,{field: 'uVipLevel', title: '会员等级'}
@@ -70,6 +79,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     "data": JSON.parse(res.data) //解析数据列表
                 };
             }
+        });
+
+        //监听头工具栏事件
+        table.on('toolbar(test)', function(obj){
+            switch(obj.event){
+                case 'refresh':
+                    location.reload();
+                    break;
+            };
         });
 
         //监听行工具事件

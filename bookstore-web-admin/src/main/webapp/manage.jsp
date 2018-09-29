@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: Q2665_yubiums
+  Date: 2018/9/29 0029
+  Time: 19:42
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<% String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/"; %>
+<base href="<%=basePath%>">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +18,12 @@
     <script src="./layui/layui.js"></script>
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/diy.css">
+    <%
+        if (session.getAttribute("admin") == null) {
+//            request.getRequestDispatcher("login.html");
+            response.sendRedirect("login.html");
+        }
+    %>
 </head>
 <body style="overflow-x:hidden;background-color: #2E2D3C;">
 <div class="layui-header" style="background-color: #2f4056;">
@@ -15,14 +32,9 @@
     </a>
     <div class="layui-col-md4" style="text-align: center;font-size: 20px;color: aliceblue;line-height: 60px;">数据管理</div>
     <ul class="layui-nav layui-bg-cyan" style="position: absolute;right: 0px;">
-        <!--<li class="layui-nav-item">-->
-            <!--<button id="login" class="layui-btn layui-btn-normal">登录</button>-->
-        <!--</li>-->
         <li class="layui-nav-item">
-            <a href=""><!--<img src="//t.cn/RCzsdCq" class="layui-nav-img">-->${admin.aUsername}</a>
+            <a href="">${admin.AUsername}</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                <!--<dd><a href="">修改信息</a></dd>-->
-                <!--<dd><a href="">个人中心</a></dd>-->
                 <dd><a href="admins?method=Exit">退出</a></dd>
             </dl>
         </li>
@@ -32,30 +44,18 @@
     <div class="layui-row layui-col-space10">
         <div style="height: 450px;min-height: 450px;" class="layui-col-md2 layui-col-md-offset1">
             <div style="height: 100%;" class="layui-card">
-                <!--<div class="layui-card-header">菜单</div>-->
                 <div style="height: 100%;padding: 0;background-color: #2f4056;" overflow class="layui-card-body">
                     <ul style="width: 100%;" class="layui-nav-tree layui-bg-cyan layui-nav layui-inline">
                         <li class="layui-nav-item layui-nav-itemed">
-                            <a href="#" onclick="return false;">管理</a>
+                            <a onclick="return false;">管理</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="jsp/info/UsersInfo.jsp" onclick="return false;">用户</a></dd>
-                                <dd><a href="jsp/info/AdminsInfo.jsp" onclick="return false;">管理员</a></dd>
+                                <c:if test="${admin.ALevel>=2}">
+                                    <dd><a href="jsp/info/AdminsInfo.jsp" onclick="return false;">管理员</a></dd>
+                                </c:if>
+                                <dd><a href="jsp/info/BooksInfo.jsp" onclick="return false;">图书</a></dd>
                             </dl>
                         </li>
-                        <!--<li class="layui-nav-item">-->
-                            <!--<a href="https://www.baidu.com" onclick="return false;">管理员</a>-->
-                            <!--<dl class="layui-nav-child">-->
-                                <!--<dd><a href="https://www.baidu.com" onclick="return false;">详情</a></dd>-->
-                                <!--<dd><a href="https://www.google.com" onclick="return false;">添加</a></dd>-->
-                            <!--</dl>-->
-                        <!--</li>-->
-                        <!--<li class="layui-nav-item">-->
-                            <!--<a href="https://www.baidu.com" onclick="return false;">用户</a>-->
-                            <!--<dl class="layui-nav-child">-->
-                                <!--<dd><a href="https://www.baidu.com" onclick="return false;">详情</a></dd>-->
-                                <!--<dd><a href="https://www.google.com" onclick="return false;">添加</a></dd>-->
-                            <!--</dl>-->
-                        <!--</li>-->
                     </ul>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                     type: 2,
                     area: ['500px', '400px'],
                     closeBtn: 2,
-                    title:false,
+                    title: false,
                     content: 'login.html'
                 });
             });

@@ -16,9 +16,22 @@
     <script type="text/javascript" src="layui/layui.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
+
 <body>
 
 <table id="demo" lay-filter="test"></table>
+
+<div class="layui-table-tool-temp" hidden id="he-bar">
+    <div class="layui-inline" lay-event="add">
+        <i class="layui-icon layui-icon-add-1"></i>
+    </div>
+    <div class="layui-inline" lay-event="update">
+        <i class="layui-icon layui-icon-edit"></i>
+    </div>
+    <div class="layui-inline" lay-event="refresh">
+        <i class="layui-icon layui-icon-refresh"></i>
+    </div>
+</div>
 
 <script type="text/html" id="barDemo">
     <%--<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>--%>
@@ -40,12 +53,12 @@
             ,url: 'admins?method=Show' //数据接口
             ,page: true //开启分页
             ,cellMinWidth: 80
-            ,toolbar: 'default'
+            ,toolbar: '#he-bar'
             ,size: 'sm'
             ,even: true
             ,cols: [[ //表头
-                // {type:'checkbox', fixed: 'left'}
-                {field: 'aId', title: '管理员id',  sort: true, fixed: 'left'}
+                {type:'checkbox', fixed: 'left'}
+                ,{field: 'aId', title: '管理员id',  sort: true, fixed: 'left'}
                 ,{field: 'aUsername', title: '用户名'}
                 ,{field: 'aPassword', title: '密码'}
                 ,{field: 'aLevel', title: '管理员级别'}
@@ -73,7 +86,7 @@
                     layer.open({
                         type: 2,
                         area: ['550px', '350px'],
-                        content: 'AddUniversity.html' //这里content是一个普通的url,todo 根据实际填写
+                        content: 'jsp/add/adminsAdd.jsp' //这里content是一个普通的url,todo 根据实际填写
                     });
                     break;
                 case 'update':
@@ -84,17 +97,13 @@
                     } else {
                         layer.open({
                             type: 2,
-                            area: ['550px', '350px'],
-                            content: '/upduniversity?universityNo='+data[0].universityNo//todo 根据实际填写
+                            area: ['750px', '450px'],
+                            content: 'admins?method=EditGet&aId='+data[0].aId//todo 根据实际填写
                         });
                     }
                     break;
-                case 'delete':
-                    if(data.length === 0){
-                        layer.msg('请选择一行');
-                    } else {
-                        layer.msg('删除');
-                    }
+                case 'refresh':
+                    location.reload();
                     break;
             };
         });

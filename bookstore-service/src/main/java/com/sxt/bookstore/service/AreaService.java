@@ -44,4 +44,11 @@ public interface AreaService extends BaseService<Area>{
      * @throws SQLException
      */
     Area getProByCityParentId(int id) throws SQLException;
+
+    /**
+     * 直辖市
+     * @param arParentId
+     * @return
+     */
+    Area getProByCountryParentId(Integer arParentId) throws SQLException;
 }
