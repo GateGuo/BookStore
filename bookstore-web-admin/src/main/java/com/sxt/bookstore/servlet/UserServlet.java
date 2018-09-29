@@ -5,10 +5,13 @@ import com.mysql.cj.xdevapi.JsonArray;
 import com.sxt.bookstore.entity.Area;
 import com.sxt.bookstore.entity.Page;
 import com.sxt.bookstore.entity.Users;
+import com.sxt.bookstore.service.AreaService;
 import com.sxt.bookstore.service.UsersService;
 import com.sxt.bookstore.service.impl.AreaServiceImpl;
 import com.sxt.bookstore.service.impl.UsersServiceImpl;
+import jdk.internal.org.objectweb.asm.tree.IntInsnNode;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,66 +22,69 @@ import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.sql.SQLException;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Q2665_yubiums
  */
 @WebServlet(name = "UserServlet", value = "/users")
-public class UserServlet extends HttpServlet {
+public class UserServlet extends BaseServlet {
 
     UsersService usersService = new UsersServiceImpl();
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
-    }
+    private void doDel(HttpServletRequest request, HttpServletResponse response) {
+        Integer uId = Integer.valueOf(request.getParameter("uId"));
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("utf-8");
-        response.setCharacterEncoding("utf-8");
+        try {
+            PrintWriter out = response.getWriter();
+            boolean flag = usersService.del(uId);
 
 
-        String method = request.getParameter("method");
-
-        String strategy = "do" + method;
-
-        switch (strategy){
-            case "doShow":
-                doShow(request, response);
-                break;
-            case "doEditGet":
-                try {
-                    doEditGet(request, response);
-                } catch (SQLException e) {
-                    try {
-                        doEditGet(request, response);
-                    } catch (SQLException e1) {
-                        e1.printStackTrace();
-                    }
-                }
-                break;
-            default:
-                doShow(request, response);
+            out.print(flag == true ? "success" : "fail");
+            out.flush();
+            out.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
-    private void doShow(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        PrintWriter out = response.getWriter();
-
-        String page1 = request.getParameter("page");
-        String limit = request.getParameter("limit");
-
-        int page = Integer.parseInt(page1);
-        int size = Integer.parseInt(limit);
-
+    private void doShow(HttpServletRequest request, HttpServletResponse response) {
         try {
+            PrintWriter out = response.getWriter();
+
+            String page1 = request.getParameter("page");
+            String limit = request.getParameter("limit");
+
+            int page = Integer.parseInt(page1);
+            int size = Integer.parseInt(limit);
+
 
             Page<Users> usersPage = usersService.getPage(page, size);
 
             HashMap<Object, Object> map = new HashMap<>(4);
+
+            AreaService areaService = new AreaServiceImpl();
+
+            usersPage.getPageData().forEach(bean -> {
+                try {
+                    Area area = areaService.getOneByPrimaryKey(bean.getUArId());
+                    Area city = areaService.getCityByCountyParentId(area.getArParentId());
+                    Area pro = areaService.getProByCityParentId(city.getArParentId());
+                    bean.setuAr(pro.getArName() + "/"
+                            + city.getArName() + "/"
+                            + area.getArName()
+                    );
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(bean);
+            });
+
 
 
             map.put("code", 200);
@@ -86,24 +92,80 @@ public class UserServlet extends HttpServlet {
             map.put("count", usersPage.getTotalCount());
             map.put("data", JSON.toJSONString(usersPage.getPageData()));
 
+
+
             Object mapString = JSON.toJSON(map);
             out.print(mapString);
             out.flush();
             out.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    private void doEditGet(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
+    private void doEditGet(HttpServletRequest request, HttpServletResponse response) {
         String uId = request.getParameter("uId");
-        Users users = usersService.getOneByPrimaryKey(Integer.valueOf(uId));
+        try {
+            Users users = usersService.getOneByPrimaryKey(Integer.valueOf(uId));
 
-        Integer uArId = users.getUArId();
-        AreaServiceImpl areaService = new AreaServiceImpl();
-        List<Area> allProvince = areaService.getAllProvince();
+            AreaService areaService = new AreaServiceImpl();
 
-        request.setAttribute("Bean", users);
-        request.getRequestDispatcher("jsp/upd/usersUpd.jsp").forward(request, response);
+            List<Area> all = areaService.getAll();
+            String string = JSON.toJSONString(all);
+
+
+            request.setAttribute("Bean", users);
+            request.setAttribute("data", string);
+
+            request.getRequestDispatcher("jsp/upd/usersUpd.jsp").forward(request, response);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void doEdit(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            PrintWriter out = response.getWriter();
+
+            Integer uId = Integer.valueOf(request.getParameter("uId"));
+            String uUsername = request.getParameter("uUsername");
+            String uPassword = request.getParameter("uPassword");
+            Integer uVipLevel = Integer.valueOf(request.getParameter("uVipLevel"));
+            String uIdCard = request.getParameter("uIdCard");
+            String uName = request.getParameter("uName");
+            String area1 = request.getParameter("area[1]");
+            String area2 = request.getParameter("area[2]");
+            Integer uArId = Integer.valueOf(area2 == null ? area1 : area2);
+            String uAddress = request.getParameter("uAddress");
+            String uPhonenumber = request.getParameter("uPhonenumber");
+            Double uAccountBalance = Double.valueOf(request.getParameter("uAccountBalance"));
+            Double uSalesBalance = Double.valueOf(request.getParameter("uSalesBalance"));
+            Double uTotalRecharge = Double.valueOf(request.getParameter("uTotalRecharge"));
+            Integer uIsSeller = "on".equalsIgnoreCase(request.getParameter("uIsSeller")) ? 1 : 0;
+
+            Users users = new Users(uId, uUsername, uPassword, uVipLevel, uIdCard,
+                    uName, uArId, uAddress, uPhonenumber,
+                    uAccountBalance, uSalesBalance, uTotalRecharge, uIsSeller);
+
+            boolean flag = false;
+            flag = usersService.upd(users);
+
+
+            out.print(flag == true ? "success" : "fail");
+            out.flush();
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

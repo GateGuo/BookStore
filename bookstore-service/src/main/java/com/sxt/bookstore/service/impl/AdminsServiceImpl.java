@@ -15,7 +15,7 @@ public class AdminsServiceImpl extends BaseServiceImpl<Admins> implements Admins
         boolean flag = false;
         if (adminsBean != null &&
                 adminsBean.getAId() != null &&
-                adminsBean.getAId() > 0
+                adminsBean.getAId() >= 0
                 ) {
             flag = baseDao.upd(adminsBean);
         }

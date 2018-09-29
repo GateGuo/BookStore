@@ -24,7 +24,17 @@ public class Admins implements java.io.Serializable {
 
     /** 管理员级别 */
     private Integer aLevel;
-    
+
+    public Admins() {
+    }
+
+    public Admins(Integer aId, String aUsername, String aPassword, Integer aLevel) {
+        this.aId = aId;
+        this.aUsername = aUsername;
+        this.aPassword = aPassword;
+        this.aLevel = aLevel;
+    }
+
     /**
      * 获取管理员id
      * 

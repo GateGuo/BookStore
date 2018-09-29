@@ -43,7 +43,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="layui-form-item">
                     <label class="layui-form-label">管理员级别</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="aLevel" id="aLevel" value="${Bean.ALevel}" >
+                        <!--<input class="layui-input" type="text" name="aLevel" id="aLevel" value="" >-->
+                        <select name="aLevel" id="aLevel">
+                            <option value="1">管理员</option>
+                            <option value="2">超级管理员</option>
+                        </select>
                     </div>
                 </div>
                 <div class="layui-form-item">
@@ -62,14 +66,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         var form = layui.form;
         var $ = layui.jquery;
 
-        form.on('submit(*)', function (data) {
-            $.get('', data.field, function (msg) {
+        let alevel = '${Bean.ALevel}';
+        if (alevel === '2') {
+            $('#aLevel').val('2');
+            form.render('select');
+        }
+
+
+
+        form.on('submit(submit)', function (data) {
+            $.get('admins?method=Edit', data.field, function (msg) {
                 if (msg === 'success') {
-                    layer.msg('添加成功');
+                    layer.msg('更新成功');
+                    let index = parent.layer.getFrameIndex(window.name);
+                    setTimeout(function () {
+                        parent.layer.close(index);
+                    }, 1000);
                 } else if (msg === 'fail') {
-                    layer.msg('添加失败');
+                    layer.msg('更新失败');
                 } else {
-                    layer.error('提交出错')
+                    layer.error('更新出错')
                 }
             });
             return false;

@@ -6,12 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/"; %>
+<base href="<%=basePath%>">
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>大学信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <title>管理员信息</title>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
 
@@ -23,25 +26,26 @@
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
-<script src="/layui/layui.js"></script>
+<script type="text/javascript" src="layui/layui.js"></script>
 <script>
     layui.use(['table','layer'], function(){
         var table = layui.table;
         var layer = layui.layer;
+        var $ = layui.jquery;
 
         //第一个实例
         table.render({
             elem: '#demo'
-            ,height: 362
-            ,url: '' //数据接口
+            ,height: 450
+            ,url: 'admins?method=Show' //数据接口
             ,page: true //开启分页
             ,cellMinWidth: 80
             ,toolbar: 'default'
             ,size: 'sm'
             ,even: true
             ,cols: [[ //表头
-                {type:'checkbox', fixed: 'left'}
-                ,{field: 'aId', title: '管理员id',  sort: true, fixed: 'left'}
+                // {type:'checkbox', fixed: 'left'}
+                {field: 'aId', title: '管理员id',  sort: true, fixed: 'left'}
                 ,{field: 'aUsername', title: '用户名'}
                 ,{field: 'aPassword', title: '密码'}
                 ,{field: 'aLevel', title: '管理员级别'}
@@ -59,10 +63,11 @@
                 };
             }
         });
+
         //监听头工具栏事件
         table.on('toolbar(test)', function(obj){
             var checkStatus = table.checkStatus(obj.config.id)
-                    ,data = checkStatus.data; //获取选中的数据
+                ,data = checkStatus.data; //获取选中的数据
             switch(obj.event){
                 case 'add':
                     layer.open({
@@ -94,6 +99,7 @@
             };
         });
 
+
         //监听行工具事件
         table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
             var data = obj.data //获得当前行数据
@@ -105,14 +111,22 @@
                     obj.del(); //删除对应行（tr）的DOM结构
                     layer.close(index);
                     //向服务端发送删除指令
+                    $.get('admins?method=Del', {'aId': data.aId}, function (msg) {
+                        console.log(msg);
+                        if (msg === 'success') {
+                            layer.msg('删除成功');
+                        } else if (msg === 'fail') {
+                            layer.msg('删除失败');
+                        } else {
+                            layer.msg('删除出错')
+                        }
+                    });
                 });
             } else if(layEvent === 'edit'){
-                // layer.msg('编辑操作');
-                // layer.alert('编辑 [id]：'+ data.universityNo);
                 layer.open({
                     type: 2,
-                    area: ['550px', '350px'],
-                    content: '/upduniversity?universityNo='+data.universityNo//todo 根据实际填写
+                    area: ['750px', '450px'],
+                    content: 'admins?method=EditGet&aId='+data.aId//todo 根据实际填写
                 });
             }
         });

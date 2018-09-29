@@ -44,4 +44,13 @@ public class AreaServiceImpl extends BaseServiceImpl<Area> implements AreaServic
         return areaDao.getCountyByCityId(id);
     }
 
+    @Override
+    public Area getCityByCountyParentId(int id) throws SQLException {
+        return areaDao.getCityByCountyParentId(id);
+    }
+
+    @Override
+    public Area getProByCityParentId(int id) throws SQLException {
+        return areaDao.getProByCityParentId(id);
+    }
 }
