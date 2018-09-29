@@ -1,14 +1,18 @@
 package com.sxt.bookstore.service.impl;
 
+import com.sxt.bookstore.dao.BooksDao;
 import com.sxt.bookstore.entity.Books;
+import com.sxt.bookstore.factory.DaoFactory;
 import com.sxt.bookstore.service.BooksService;
 
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * @author Q2665_yubiums
  */
 public class BooksServiceImpl extends BaseServiceImpl<Books> implements BooksService {
+    BooksDao dao = (BooksDao) DaoFactory.getInstance().getDao("Books");
 
     @Override
     public boolean upd(Books booksBean) throws SQLException {
@@ -20,5 +24,10 @@ public class BooksServiceImpl extends BaseServiceImpl<Books> implements BooksSer
             flag = baseDao.upd(booksBean);
         }
         return flag;
+    }
+
+    @Override
+    public List<Books> getHotBooks(int typeId, int number) throws SQLException {
+        return dao.getHotBooks(typeId,number);
     }
 }

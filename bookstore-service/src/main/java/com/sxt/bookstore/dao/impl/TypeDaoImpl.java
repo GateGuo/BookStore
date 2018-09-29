@@ -110,4 +110,12 @@ public class TypeDaoImpl extends BaseDaoImpl<Type> implements TypeDao  {
 
         return count;
     }
+
+    @Override
+    public Type getTypeByName(String name) throws SQLException {
+        String sql="SELECT * FROM `TYPE` WHERE T_NAME = ?";
+        Object[] params={name};
+        Type type=dqlGetSingle(sql,params);
+        return type;
+    }
 }

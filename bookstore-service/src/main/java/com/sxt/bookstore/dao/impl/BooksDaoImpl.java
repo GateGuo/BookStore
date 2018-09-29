@@ -18,6 +18,7 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
     public boolean add(Books booksBean) throws SQLException {
         String sql = "INSERT INTO `BOOKS`(" +
                 "B_NAME," +
+                "B_AUTHOR," +
                 "B_PRICE," +
                 "B_COUNT," +
                 "B_TAG," +
@@ -35,11 +36,13 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
                 "?," +
                 "?," +
                 "?," +
+                "?," +
                 "?" +
                 ")";
 
         Object[] params = {
                 booksBean.getBName(),
+                booksBean.getBAuthor(),
                 booksBean.getBPrice(),
                 booksBean.getBCount(),
                 booksBean.getBTag(),
@@ -58,6 +61,7 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
     public boolean upd(Books booksBean) throws SQLException {
         String sql = "UPDATE `BOOKS` SET " +
                 "B_NAME = ?," +
+                "B_AUTHOR = ?," +
                 "B_PRICE = ?," +
                 "B_COUNT = ?," +
                 "B_TAG = ?," +
@@ -70,6 +74,7 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
 
         Object[] params = {
                 booksBean.getBName(),
+                booksBean.getBAuthor(),
                 booksBean.getBPrice(),
                 booksBean.getBCount(),
                 booksBean.getBTag(),
@@ -139,5 +144,13 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
         Long count = dqlGetCount(sql);
 
         return count;
+    }
+
+    @Override
+    public List<Books> getHotBooks(int typeId,int number) throws SQLException {
+        String sql="SELECT * FROM `books` where b_t_id=? ORDER BY b_sales_volume LIMIT 0,?";
+        Object[] params = {typeId,number};
+        List<Books> list = dqlGetList(sql, params);
+        return list;
     }
 }

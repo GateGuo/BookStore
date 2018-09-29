@@ -16,6 +16,9 @@ public class Books implements java.io.Serializable {
     /** 书籍id */
     private Integer bId;
 
+    /** 书籍作者 */
+    private String bAuthor;
+
     /** 书名 */
     private String bName;
 
@@ -233,10 +236,19 @@ public class Books implements java.io.Serializable {
         this.bImgName = bImgName;
     }
 
+    public String getBAuthor() {
+        return bAuthor;
+    }
+
+    public void setBAuthor(String bAuthor) {
+        this.bAuthor = bAuthor;
+    }
+
     @Override
     public String toString() {
         return "Books{" +
                 "bId=" + bId +
+                ", bAuthor='" + bAuthor + '\'' +
                 ", bName='" + bName + '\'' +
                 ", bPrice=" + bPrice +
                 ", bCount=" + bCount +
