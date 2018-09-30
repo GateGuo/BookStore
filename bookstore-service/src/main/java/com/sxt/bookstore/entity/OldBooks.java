@@ -28,6 +28,9 @@ public class OldBooks implements java.io.Serializable {
     /** 标签 */
     private String obTag;
 
+    /** 书籍作者 */
+    private String obAuthor;
+
     /** 描述 */
     private String obDescription;
 
@@ -255,6 +258,14 @@ public class OldBooks implements java.io.Serializable {
         this.obImgName = obImgName;
     }
 
+    public String getObAuthor() {
+        return obAuthor;
+    }
+
+    public void setObAuthor(String obAuthor) {
+        this.obAuthor = obAuthor;
+    }
+
     @Override
     public String toString() {
         return "OldBooks{" +
@@ -263,6 +274,7 @@ public class OldBooks implements java.io.Serializable {
                 ", obPrice=" + obPrice +
                 ", obCount=" + obCount +
                 ", obTag='" + obTag + '\'' +
+                ", obAuthor='" + obAuthor + '\'' +
                 ", obDescription='" + obDescription + '\'' +
                 ", obTypeId=" + obTypeId +
                 ", obSellerId=" + obSellerId +

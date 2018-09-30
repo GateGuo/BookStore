@@ -44,16 +44,28 @@ public class BooksServlet extends BaseServlet {
         response.setCharacterEncoding("utf-8");
         List firstList=null;
         List secondList=null;
+        List thirdList=null;
+        List fouthList=null;
+        List fifthList=null;
         try {
             int firstType=tservice.getTypeByName("历史").getTId();
             int secondType=tservice.getTypeByName("小说").getTId();
+            int thirdType=tservice.getTypeByName("计算机").getTId();
+            int fouthType=tservice.getTypeByName("绘本").getTId();
+            int fifthType=tservice.getTypeByName("成功").getTId();
             firstList=service.getHotBooks(firstType,FIRSTLISTNUMBER);
             secondList=service.getHotBooks(secondType,FIRSTLISTNUMBER*2);
+            thirdList=service.getHotBooks(thirdType,FIRSTLISTNUMBER*2);
+            fouthList=service.getHotBooks(fouthType,FIRSTLISTNUMBER*2);
+            fifthList=service.getHotBooks(fifthType,FIRSTLISTNUMBER*2);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         request.setAttribute("firstList",firstList);
         request.setAttribute("secondList",secondList);
+        request.setAttribute("thirdList",thirdList);
+        request.setAttribute("fouthList",fouthList);
+        request.setAttribute("fifthList",fifthList);
         request.getRequestDispatcher("books.jsp").forward(request,response);
     }
 }
