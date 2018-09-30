@@ -35,8 +35,8 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
                 "?," +
                 "?," +
                 "?," +
-                "?," +
-                "?," +
+                "NOW()," +
+                "0," +
                 "?" +
                 ")";
 
@@ -48,8 +48,6 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
                 booksBean.getBTag(),
                 booksBean.getBDescription(),
                 booksBean.getBTId(),
-                booksBean.getBUpTime(),
-                booksBean.getBSalesVolume(),
                 booksBean.getBImgName()
         };
         boolean flag = dml(sql, params);

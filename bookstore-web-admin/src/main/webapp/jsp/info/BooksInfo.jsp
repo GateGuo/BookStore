@@ -41,9 +41,10 @@
 
 <script src="layui/layui.js"></script>
 <script>
-    layui.use(['table','layer'], function(){
+    layui.use(['table','layer','jquery'], function(){
         var table = layui.table;
         var layer = layui.layer;
+        var $ = layui.jquery;
 
         //第一个实例
         table.render({
@@ -59,6 +60,7 @@
                 {type:'checkbox', fixed: 'left'}
                 ,{field: 'bId', title: '书籍id',  sort: true, fixed: 'left'}
                 ,{field: 'bName', title: '书名'}
+                ,{field: 'bAuthor', title: '作者'}
                 ,{field: 'bPrice', title: '价格'}
                 ,{field: 'bCount', title: '库存'}
                 ,{field: 'bTag', title: '标签'}
@@ -89,7 +91,7 @@
                 case 'add':
                     layer.open({
                         type: 2,
-                        area: ['550px', '350px'],
+                        area: ['750px', '450px'],
                         content: 'jsp/add/booksAdd.jsp' //这里content是一个普通的url,todo 根据实际填写
                     });
                     break;
@@ -102,7 +104,7 @@
                         layer.open({
                             type: 2,
                             area: ['750px', '450px'],
-                            content: 'books?method=EditGet&aId='+data[0].aId//todo 根据实际填写
+                            content: 'books?method=EditGet&bId='+data[0].aId//todo 根据实际填写
                         });
                     }
                     break;
@@ -120,17 +122,27 @@
                 layer.msg('查看操作');
             } else if(layEvent === 'del'){
                 layer.confirm('真的删除行么', function(index){
-                    obj.del(); //删除对应行（tr）的DOM结构
                     layer.close(index);
                     //向服务端发送删除指令
+                    $.get('books?method=Del', {'bId': data.bId}, function (msg) {
+                        console.log(msg);
+                        if (msg === 'success') {
+                            layer.msg('删除成功');
+                            obj.del(); //删除对应行（tr）的DOM结构
+                        } else if (msg === 'fail') {
+                            layer.msg('删除失败');
+                        } else {
+                            layer.msg('删除出错')
+                        }
+                    });
                 });
             } else if(layEvent === 'edit'){
                 // layer.msg('编辑操作');
                 // layer.alert('编辑 [id]：'+ data.universityNo);
                 layer.open({
                     type: 2,
-                    area: ['550px', '350px'],
-                    content: '/upduniversity?universityNo='+data.universityNo//todo 根据实际填写
+                    area: ['750px', '450px'],
+                    content: 'books?method=EditGet&bId='+data.bId //todo 根据实际填写
                 });
             }
         });

@@ -117,13 +117,13 @@
                 layer.msg('查看操作');
             } else if(layEvent === 'del'){
                 layer.confirm('真的删除行么', function(index){
-                    obj.del(); //删除对应行（tr）的DOM结构
                     layer.close(index);
                     //向服务端发送删除指令
                     $.get('admins?method=Del', {'aId': data.aId}, function (msg) {
                         console.log(msg);
                         if (msg === 'success') {
                             layer.msg('删除成功');
+                            obj.del(); //删除对应行（tr）的DOM结构
                         } else if (msg === 'fail') {
                             layer.msg('删除失败');
                         } else {

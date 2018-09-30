@@ -54,6 +54,7 @@
                                     <dd><a href="jsp/info/AdminsInfo.jsp" onclick="return false;">管理员</a></dd>
                                 </c:if>
                                 <dd><a href="jsp/info/BooksInfo.jsp" onclick="return false;">图书</a></dd>
+                                <dd><a href="jsp/info/OrdersInfo.jsp" onclick="return false;">订单</a></dd>
                             </dl>
                         </li>
                     </ul>
@@ -120,18 +121,19 @@
                 } else {
                     $lc.children('a').last().html('<cite>' + textPre + '</cite>');
                 }
+                $lc.children('a').first().remove();
+                $lc.children('span').first().remove();
             });
         });
         $(function () {
             function updHeight() {
                 var height = $(window).height();
-                $('.layui-row > div').css('height', (height * 0.8) + 'px');
+                $('.layui-row > div').css('height', (height * 0.85) + 'px');
                 var lcHei = $('#lc').height();
                 var heHei = $('#lc .layui-card-header').height();
                 var number = lcHei - heHei;
                 $('#lc div div').css('height', (number - 15) + 'px');
             }
-
             updHeight();
 
             $(window).resize(function () {

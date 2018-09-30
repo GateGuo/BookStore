@@ -58,7 +58,6 @@ public class AdminServlet extends BaseServlet {
             int page = Integer.parseInt(page1);
             int size = Integer.parseInt(limit);
 
-
             Page<Admins> adminsPage = adminsService.getPage(page, size);
 
             HashMap<Object, Object> map = new HashMap<>(4);
