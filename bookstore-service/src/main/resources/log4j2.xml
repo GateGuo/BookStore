@@ -85,7 +85,7 @@
 
     <loggers>
         <root level="DEBUG">
-            <appender-ref ref="Console"/>
+            <!--<appender-ref ref="Console"/>-->
             <appender-ref ref="RollingFileInfo"/>
             <appender-ref ref="RollingFileWarn"/>
             <appender-ref ref="RollingFileError"/>
@@ -93,14 +93,14 @@
         </root>
 
         <!--记录druid-sql的记录-->
-        <logger name="druid.sql.Statement" level="debug" additivity="false">
-            <appender-ref ref="Console"/>
-            <appender-ref ref="RollingFileDebug"/>
-        </logger>
-        <logger name="druid.sql.ResultSet" level="debug" additivity="false">
-            <appender-ref ref="Console"/>
-            <appender-ref ref="RollingFileDebug"/>
-        </logger>
+        <!--<logger name="druid.sql.Statement" level="debug" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+            <!--<appender-ref ref="RollingFileDebug"/>-->
+        <!--</logger>-->
+        <!--<logger name="druid.sql.ResultSet" level="debug" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+            <!--<appender-ref ref="RollingFileDebug"/>-->
+        <!--</logger>-->
 
         <!--log4j2 自带过滤日志-->
         <Logger name="org.apache.catalina.startup.DigesterFactory" level="error" />

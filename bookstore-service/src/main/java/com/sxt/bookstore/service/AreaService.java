@@ -29,4 +29,26 @@ public interface AreaService extends BaseService<Area>{
      */
     List<Area> getCountyByCityId(int id) throws SQLException;
 
+    /**
+     * 通过区县id获得城市
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+    Area getCityByCountyParentId(int id) throws SQLException;
+
+    /**
+     * 通过市id获得省
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+    Area getProByCityParentId(int id) throws SQLException;
+
+    /**
+     * 直辖市
+     * @param arParentId
+     * @return
+     */
+    Area getProByCountryParentId(Integer arParentId) throws SQLException;
 }

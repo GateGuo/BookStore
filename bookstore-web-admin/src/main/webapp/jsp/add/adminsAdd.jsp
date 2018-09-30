@@ -37,7 +37,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="layui-form-item">
                     <label class="layui-form-label">管理员级别</label>
                     <div class="layui-input-block">
-                        <input class="layui-input" type="text" name="aLevel" id="aLevel">
+                        <!--<input class="layui-input" type="text" name="aLevel" id="aLevel">-->
+                        <select name="aLevel" id="aLevel">
+                            <option value="1">管理员</option>
+                            <option value="2">超级管理员</option>
+                        </select>
                     </div>
                 </div>
                 <div class="layui-form-item">
@@ -56,10 +60,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         var form = layui.form;
         var $ = layui.jquery;
 
-        form.on('submit(*)', function (data) {
-            $.get('', data.field, function (msg) {
+        form.on('submit(submit)', function (data) {
+            $.get('admins?method=Add', data.field, function (msg) {
                 if (msg === 'success') {
                     layer.msg('添加成功');
+                    let index = parent.layer.getFrameIndex(window.name);
+                    setTimeout(function () {
+                        parent.layer.close(index);
+                        parent.location.reload();
+                    }, 1000);
                 } else if (msg === 'fail') {
                     layer.msg('添加失败');
                 } else {
