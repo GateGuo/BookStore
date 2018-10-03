@@ -6,6 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="bookstore-service" />
+        <module name="bookstore-web-admin" />
+        <module name="bookstore-web-user" />
         <module name="bookstoreservice" />
         <module name="bookstorewebadmin" />
         <module name="bookstorewebuser" />

@@ -2,6 +2,8 @@ package com.sxt.bookstore.service.impl;
 
 
 import com.sxt.bookstore.dao.BaseDao;
+import com.sxt.bookstore.dao.OrderGoodsDao;
+import com.sxt.bookstore.dao.impl.OrderGoodsDaoImpl;
 import com.sxt.bookstore.entity.Page;
 import com.sxt.bookstore.factory.DaoFactory;
 import com.sxt.bookstore.service.BaseService;
@@ -9,6 +11,7 @@ import com.sxt.bookstore.util.Mapping;
 
 import java.lang.reflect.ParameterizedType;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -74,5 +77,15 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
     public Long getCount() throws SQLException {
         Long count = baseDao.getCount();
         return count;
+    }
+
+    @Override
+    public List<T> getbyforeignid(Integer foreignid) throws SQLException {
+        OrderGoodsDao dao = new OrderGoodsDaoImpl();
+        List list = new ArrayList();
+        if(foreignid!=null){
+            list = dao.getbyforeignid(foreignid);
+        }
+        return list;
     }
 }

@@ -110,4 +110,6 @@ public class AdminsDaoImpl extends BaseDaoImpl<Admins> implements AdminsDao  {
 
         return count;
     }
+
+
 }

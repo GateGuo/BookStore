@@ -110,4 +110,12 @@ public class OrderGoodsDaoImpl extends BaseDaoImpl<OrderGoods> implements OrderG
 
         return count;
     }
+    @Override
+    public List<OrderGoods> getbyforeignid(Integer foreignid) throws SQLException{
+        String sql = "SELECT * FROM `ORDER_GOODS` WHERE OG_OR_ID = ?";
+        Object[] params = {foreignid};
+        List<OrderGoods> orderlist = dqlGetList(sql,params);
+
+        return orderlist;
+    }
 }

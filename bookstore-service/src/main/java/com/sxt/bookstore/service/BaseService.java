@@ -51,7 +51,15 @@ public interface BaseService<T> {
     /**
      * 获取单张数据表元素个数
      * @return
+     * @throws SQLException sql
      */
     Long getCount() throws SQLException;
 
+    /**
+     * 通过书籍id获取订单信息
+     * @param foreignid 书籍id
+     * @return
+     * @throws SQLException sql
+     */
+    List<T> getbyforeignid(Integer foreignid) throws SQLException;
 }

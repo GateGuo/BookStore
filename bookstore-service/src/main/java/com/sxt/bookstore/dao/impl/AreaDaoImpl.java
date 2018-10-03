@@ -111,6 +111,8 @@ public class AreaDaoImpl extends BaseDaoImpl<Area> implements AreaDao  {
         return count;
     }
 
+
+
     @Override
     public List<Area> getAllProvince() throws SQLException {
         String sql = "SELECT * FROM AREA WHERE AR_LEVEL = 1";
