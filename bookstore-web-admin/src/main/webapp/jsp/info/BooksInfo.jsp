@@ -104,7 +104,7 @@
                         layer.open({
                             type: 2,
                             area: ['750px', '450px'],
-                            content: 'books?method=EditGet&bId='+data[0].aId//todo 根据实际填写
+                            content: 'books?method=EditGet&bId='+data[0].bId//todo 根据实际填写
                         });
                     }
                     break;

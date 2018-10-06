@@ -130,4 +130,20 @@ public class OrdersDaoImpl extends BaseDaoImpl<Orders> implements OrdersDao  {
 
         return count;
     }
+
+    @Override
+    public boolean ship(Integer orId, String orCourierCompany, String orTrackingNumber) throws SQLException {
+        String sql = "UPDATE `ORDERS` SET " +
+                "OR_COURIER_COMPANY= ?," +
+                "OR_STATUS= '2'," +
+                "OR_TRACKING_NUMBER= ?" +
+                " WHERE OR_ID = ?";
+
+        Object[] params = {
+                orCourierCompany,orTrackingNumber,orId
+        };
+        boolean flag = dml(sql, params);
+
+        return flag;
+    }
 }
