@@ -1,10 +1,10 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false"  %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>商品详情页</title>
+    <title>商品列表</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +21,6 @@
     ============================================ -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="css/details.css">
     <!-- Nivo slider CSS
     ============================================ -->
     <link rel="stylesheet" type="text/css" href="lib/custom-slider/css/nivo-slider.css" media="screen" />
@@ -54,11 +53,15 @@
     <!-- responsive CSS
     ============================================ -->
     <link rel="stylesheet" href="css/responsive.css">
-    <style type="text/css" >
-        .comments{
-            height: 66px;
+    <style >
+        .h50{
+            height: 50px;
+        }
+        .pagination{
+            border: none;
         }
     </style>
+
     <!-- modernizr JS
     ============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -317,88 +320,120 @@
         <div class="row">
             <div class="col-md-12 text-left">
                 <ul class="breadcrumb">
-                    <li><a href="books?m=doShow">主页</a><span> - </span></li>
-                    <li class="active">Details</li>
+                    <li><a href="books?m=doShow">Home</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
-<div class="blog-fullview-area blog-details">
+<div class="shop-list-leftsidebar-area rightsidebar">
     <div class="container">
         <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="single-latest-blog">
-                            <div class="single-latest-blog-img">
-                                <%--<img src="img/blog/blog-details.jpg" alt="">--%>
-                                    <img src="${book.BImgName}" alt="">
-                                <div class="bookInfo">
-                                    <div class="ml_20">
-                                            <h3>${book.BName}</h3>
-                                            <div class="bookDescription">
-                                                <%--<h4>大英帝国的逆袭之路</h4>--%>
-                                                <p>${book.BDescription}</p>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="tab-content">
+                    <div id="grid"  role="tabpanel">
+                        <div class="row">
+
+                            <c:forEach items="${pagebean.data}" var="book">
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="single-product">
+                                    <div class="single-product-item">
+                                        <div class="single-product-img clearfix hover-effect">
+                                            <a href="#">
+                                                <img class="primary-image" src="${book.BImgName}" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="single-product-info clearfix">
+                                            <div class="pro-price">
+                                                <span class="new-price">￥${book.BPrice}</span>
                                             </div>
-                                            <button class="btn btn-danger" id="add">加入购物车</button>
+                                            <div class="new-sale">
+                                                <span>new</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h3>${book.BName}</h3>
+                                            <h4><a href="books?m=doDetails&bId=${book.BId}">view details</a></h4>
+                                        </div>
+                                        <div class="product-action">
+                                            <input type="hidden" value="${book.BId}"/>
+                                            <ul>
+                                                <li class="add-bag"><a  data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="single-latest-blog-text">
-                                <div class="date-comment clearfix">
-                                    <h4>作者:${book.BAuthor}</h4>
-                                    <h5>￥${book.BPrice}</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="comments">
-                            <div class="comments_list">
-                                <div class="comment_list_div">
-                                    <ol class="commentlists">
 
-                                    </ol>
-                                </div>
-                            </div>
+                            </c:forEach>
+
                         </div>
-                        <div class="leave-a-comment">
-                            <div class="section-heading">
-                                <h3>leave a comment</h3>
-                            </div>
-                            <div class="leave_comment">
-                                <form action="#" method="post">
-                                    <p>Message </p>
-                                    <textarea cols="114" rows="2" id="message"></textarea>
-                                    <input type="submit" value="add Comment" id="addComment">
-                                </form>
-                            </div>
-                        </div>
+
                     </div>
+
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-                <div class="blog-sidebar">
-                    <div class="single-left-widget">
-                        <div class="section-title" id="type-list">
-                            <h4>分类</h4>
-                            <ul>
-                                <!--用ajax查出所有类用js添加节点-->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="single-left-widget">
-                        <div class="section-title">
-                            <h4>tags</h4>
-                            <span>${book.BTag}</span>
-                        </div>
-                    </div>
-                </div>
+
+
+
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination pagination-lg">
+                            <li>
+                                <c:choose>
+                                    <c:when test="${pagebean.currentPage <=1 }">
+                                        <a href="books?m=doGetPageByTypeId&current=1&tid=${tid}" aria-label="Previous">
+                                    </c:when>
+                                    <c:otherwise>
+                                        <a href="books?m=doGetPageByTypeId&current=${pagebean.currentPage-1}&tid=${tid}" aria-label="Previous">
+                                        </c:otherwise>
+                                </c:choose>
+
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <c:forEach begin="${pagebean.beginNum}" end="${pagebean.endNum}" var="i">
+
+                                <c:choose>
+                                    <c:when test="${pagebean.currentPage == i }" >
+                                        <li class="active"><a href="books?m=doGetPageByTypeId&current=${i}&tid=${tid}">${i}</a></li>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <li><a href="books?m=doGetPageByTypeId&current=${i}&tid=${tid}">${i}</a></li>
+                                    </c:otherwise>
+                                </c:choose>
+                            </c:forEach>
+                            <li>
+                                <c:choose>
+                                    <c:when test="${pagebean.currentPage >=pagebean.totalPage }">
+                                        <a href="books?m=doGetPageByTypeId&current=${pagebean.totalPage}&tid=${tid}" aria-label="Next">
+                                    </c:when>
+                                    <c:otherwise>
+                                        <a href="books?m=doGetPageByTypeId&current=${pagebean.currentPage+1}&tid=${tid}" aria-label="Next">
+                                            </c:otherwise>
+                                        </c:choose>
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+            </div>
+        </div>
+
+
     </div>
 </div>
-<!-- latest blog end -->
 
+
+<div class="h50"></div>
+<!-- latest blog end -->
 <!-- footer start -->
 <footer class="footer-area">
     <div class="footer-middle-area">
@@ -476,26 +511,6 @@
 </footer>
 <!-- footer end -->
 
-<!--模态框-->
-<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">回复内容</h4>
-            </div>
-            <div class="modal-body">
-                <textarea id="msg">
-
-                </textarea>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" id="call">回复</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
 <!-- jquery
 ============================================ -->
@@ -534,6 +549,7 @@
 <!-- main JS
 ============================================ -->
 <script src="js/main.js"></script>
-<script src="js/details.js"></script>
+<script src="js/list.js"></script>
 </body>
 </html>
+

@@ -3,6 +3,8 @@ package com.sxt.bookstore.servlet;
 
 import com.alibaba.fastjson.JSON;
 import com.sxt.bookstore.entity.Books;
+import com.sxt.bookstore.entity.Page;
+import com.sxt.bookstore.entity.PageBean;
 import com.sxt.bookstore.entity.Type;
 import com.sxt.bookstore.service.BooksService;
 import com.sxt.bookstore.service.TypeService;
@@ -85,6 +87,38 @@ public class BooksServlet extends BaseServlet {
         request.getRequestDispatcher("details.jsp").forward(request,response);
     }
 
-
-
+    private void doGetPageByKeyWords(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+        String keyword=request.getParameter("keyword");
+        String current=request.getParameter("current");
+        PageBean pb=null;
+        try {
+            pb=service.getListByKeyWords(keyword,current);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        request.setAttribute("pagebean",pb);
+        request.setAttribute("keyword",keyword);
+        request.getRequestDispatcher("list.jsp").forward(request,response);
     }
+
+
+    private void doGetPageByTypeId(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+        String tid=request.getParameter("tid");
+        String current=request.getParameter("current");
+        PageBean pb=null;
+        try {
+            pb=service.getPageByTypeId(Integer.parseInt(tid),current);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        request.setAttribute("pagebean",pb);
+        request.setAttribute("tid",tid);
+        request.getRequestDispatcher("typelist.jsp").forward(request,response);
+    }
+
+
+}

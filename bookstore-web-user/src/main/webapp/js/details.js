@@ -2,7 +2,7 @@ $(function () {
     $.get("type?m=doShowAllTypes",{},function(data){
         var types=JSON.parse(data);
         for(t in types){
-            $("#type-list").children('ul').append("<li><a href='#'"+types[t].tId+">"+types[t].tName+"</a></li>");
+            $("#type-list").children('ul').append("<li><a href='books?m=doGetPageByTypeId&tid="+types[t].tId+"'>"+types[t].tName+"</a></li>");
         }
     });
 

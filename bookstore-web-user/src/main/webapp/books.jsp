@@ -240,8 +240,9 @@
                 </div>
                 <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12">
                     <div class="search-box">
-                        <form action="#">
-                            <input type="text" placeholder="Search">
+                        <form action="books" method="get">
+                            <input type="hidden" name="m" value="doGetPageByKeyWords">
+                            <input type="text" placeholder="Search" name="keyword">
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>

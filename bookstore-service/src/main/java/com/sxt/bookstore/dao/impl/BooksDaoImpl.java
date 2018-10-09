@@ -4,6 +4,7 @@ import com.sxt.bookstore.annotation.Dao;
 import com.sxt.bookstore.dao.BooksDao;
 import com.sxt.bookstore.entity.Books;
 import com.sxt.bookstore.entity.Page;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -150,5 +151,39 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
         Object[] params = {typeId,number};
         List<Books> list = dqlGetList(sql, params);
         return list;
+    }
+
+    @Override
+    public Long getCountByKeyWords(String keyword) throws SQLException {
+        String sql = "SELECT COUNT(1) FROM `BOOKS` where CONCAT(IFNULL(`b_name`,''),IFNULL(`b_tag`,''),IFNULL(`b_author`,'')) like '%' ? '%'";
+        Object[] params = {keyword};
+        Long count = queryRunner.query(sql,params,
+                new ScalarHandler<>());
+        return count;
+    }
+
+    @Override
+    public List<Books> getListByKeyWords(String keyword,int page,int size) throws SQLException {
+        String sql="SELECT * FROM `books` where CONCAT(IFNULL(`b_name`,''),IFNULL(`b_tag`,''),IFNULL(`b_author`,'')) like '%' ? '%' limit ?,?";
+        Object[] params = {keyword,(page-1)*size,size};
+        List<Books> list = dqlGetList(sql, params);
+        return list;
+    }
+
+    @Override
+    public List<Books> getListByTypeId(int tid,int page,int size) throws SQLException {
+        String sql="SELECT * FROM `books` where b_t_id= ? limit ?,?";
+        Object[] params={tid,page,size};
+        List<Books> list=dqlGetList(sql,params);
+        return list;
+    }
+
+    @Override
+    public Long getCountByTypeId(int tid) throws SQLException {
+        String sql = "SELECT COUNT(1) FROM `BOOKS`  where b_t_id= ?";
+        Object[] params = {tid};
+        Long count = queryRunner.query(sql,params,
+                new ScalarHandler<>());
+        return count;
     }
 }
