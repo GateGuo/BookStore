@@ -116,9 +116,9 @@
                                 <li class="login"><a href="#">login</a>
                                     <ul class="submenu-mainmenu">
                                         <li><a href="#">login or register</a></li>
-                                        <li class="login-button"><a href="#">login</a></li>
+                                        <li class="login-button"><a href="login.jsp">login</a></li>
                                         <li><a href="#">or</a></li>
-                                        <li class="creat-button"><a href="#">creat account</a></li>
+                                        <li class="creat-button"><a href="register.jsp">register</a></li>
                                     </ul>
                                 </li>
                                 <li class="cart"><a href="cart.html"><img src="img/icon/cart.png" alt="cart"><p>2</p></a>

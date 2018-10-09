@@ -4,6 +4,7 @@ import com.sxt.bookstore.annotation.Dao;
 import com.sxt.bookstore.dao.UsersDao;
 import com.sxt.bookstore.entity.Users;
 import com.sxt.bookstore.entity.Page;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -154,5 +155,13 @@ public class UsersDaoImpl extends BaseDaoImpl<Users> implements UsersDao  {
         Long count = dqlGetCount(sql);
 
         return count;
+    }
+
+    @Override
+    public Users login(String username, String password) throws SQLException {
+        String sql="SELECT * FROM `users` WHERE u_username = ? AND u_password = ?";
+        Object[] params = {username,password};
+        Users users=dqlGetSingle(sql,params);
+        return users;
     }
 }

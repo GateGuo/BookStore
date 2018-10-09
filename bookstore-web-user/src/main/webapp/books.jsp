@@ -108,9 +108,9 @@
                                 <li class="login"><a href="#">login</a>
                                     <ul class="submenu-mainmenu">
                                         <li><a href="#">login or register</a></li>
-                                        <li class="login-button"><a href="#">login</a></li>
+                                        <li class="login-button"><a href="login.jsp">login</a></li>
                                         <li><a href="#">or</a></li>
-                                        <li class="creat-button"><a href="#">creat account</a></li>
+                                        <li class="creat-button"><a href="register.jsp">register</a></li>
                                     </ul>
                                 </li>
                                 <li class="cart"><a href="cart.html"><img src="img/icon/cart.png" alt="cart"><p>2</p></a>
@@ -378,7 +378,7 @@
                                         <div class="single-product">
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
-                                                    <a href="#">
+                                                    <a href="books?m=doDetails&bId=${book.BId}">
                                                         <img class="primary-image" src="${book.BImgName}" alt="">
                                                     </a>
                                                 </div>
@@ -889,7 +889,7 @@
                                         <div class="single-product">
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
-                                                    <a href="#">
+                                                    <a href="books?m=doDetails&bId=${secondList[status.index].BId}">
                                                         <img class="primary-image" src="${secondList[status.index].BImgName}" alt="">
                                                     </a>
                                                 </div>
@@ -913,7 +913,7 @@
                                         <div class="single-product">
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
-                                                    <a href="#">
+                                                    <a href="books?m=doDetails&bId=${secondList[status.index+1].BId}">
                                                         <img class="primary-image" src="${secondList[status.index+1].BImgName}" alt="">
                                                     </a>
                                                 </div>
@@ -1818,7 +1818,7 @@
                                         <div class="single-product">
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
-                                                    <a href="#">
+                                                    <a href="books?m=doDetails&bId=${thirdList[status.index].BId}">
                                                         <img class="primary-image" src="${thirdList[status.index].BImgName}" alt="">
                                                     </a>
                                                 </div>
@@ -1842,7 +1842,7 @@
                                         <div class="single-product">
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
-                                                    <a href="#">
+                                                    <a href="books?m=doDetails&bId=${thirdList[status.index+1].BId}">
                                                         <img class="primary-image" src="${thirdList[status.index+1].BImgName}" alt="">
                                                     </a>
                                                 </div>
@@ -2749,7 +2749,7 @@
                                         <div class="single-product">
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
-                                                    <a href="#">
+                                                    <a href="books?m=doDetails&bId=${fouthList[status.index].BId}">
                                                         <img class="primary-image" src="${fouthList[status.index].BImgName}" alt="">
                                                     </a>
                                                 </div>
@@ -2773,7 +2773,7 @@
                                         <div class="single-product">
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
-                                                    <a href="#">
+                                                    <a href="books?m=doDetails&bId=${fouthList[status.index+1].BId}">
                                                         <img class="primary-image" src="${fouthList[status.index+1].BImgName}" alt="">
                                                     </a>
                                                 </div>
@@ -3680,7 +3680,7 @@
                                         <div class="single-product">
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
-                                                    <a href="#">
+                                                    <a href="books?m=doDetails&bId=${fifthList[status.index].BId}">
                                                         <img class="primary-image" src="${fifthList[status.index].BImgName}" alt="">
                                                     </a>
                                                 </div>
@@ -3704,7 +3704,7 @@
                                         <div class="single-product">
                                             <div class="single-product-item">
                                                 <div class="single-product-img clearfix hover-effect">
-                                                    <a href="#">
+                                                    <a href="books?m=doDetails&bId=${fifthList[status.index+1].BId}">
                                                         <img class="primary-image" src="${fifthList[status.index+1].BImgName}" alt="">
                                                     </a>
                                                 </div>
