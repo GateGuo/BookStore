@@ -1154,6 +1154,7 @@ span.counting{
     margin-right: 0px;
 }
 .product-action ul li.add-bag {
+    cursor: pointer;
     width: 100%;
 }
 .product-action ul li a{
@@ -1332,7 +1333,6 @@ label {
   font-weight: 300;
 }
 .date-comment{
-    border-bottom: 1px solid #ddd;
     margin-bottom: 12px;
     padding: 0px 30px;
 }
@@ -2205,7 +2205,7 @@ ul.color-widget li:last-child{
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 15 px;
+    margin-bottom: 15px;
 }
 .quantity_wanted_p label {
     display: block;
@@ -2942,7 +2942,7 @@ option {
     padding: 0;
 }
 .blog-fullview-area .date-comment {
-    margin-bottom: 17px;
+    /*margin-bottom: 17px;*/
 }
 .blog-fullview-area .single-latest-blog-img {
     padding-bottom: 16px;
@@ -3034,6 +3034,7 @@ p.comment_time {
     line-height: 0;
 }
 .comment-reply-link {
+    cursor: pointer;
     background: #f05a66 none repeat scroll 0 0;
     color: #ffffff;
     font-size: 13px;
@@ -3048,6 +3049,7 @@ p.comment_time {
     transition: all 0.5s ease 0s;
 }
 .comment-reply-link:hover {
+    cursor: pointer;
     color: #000;
 }
 ol {

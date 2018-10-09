@@ -1,0 +1,32 @@
+.bookInfo{
+    float:right;
+    margin-right: 100px;
+    width: 490px;
+    height: 300px;
+    margin-top: 30px;
+}
+
+.bookDescription{
+    margin-top: 30px;
+    font-size: 19px;
+}
+
+.ml_20{
+    margin-left: 20px;
+}
+
+.alex img{
+    width: 77px;
+}
+
+.callback{
+    color: #F05A66;
+    position: absolute;
+    top: 89px;
+    right: 43px;
+    cursor: pointer;
+}
+
+.children_comment{
+    display: none;
+}

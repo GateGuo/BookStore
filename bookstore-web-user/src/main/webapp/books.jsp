@@ -388,13 +388,12 @@
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3>${book.BName}</h3>
-                                                    <h4>${book.BDescription}</h4>
-                                                    <h4><a href="#">view details</a></h4>
+                                                    <h4><a href="books?m=doDetails&bId=${book.BId}">view details</a></h4>
                                                 </div>
                                                 <div class="product-action">
                                                     <input type="hidden" value="${book.BId}"/>
                                                     <ul>
-                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                        <li class="add-bag"><a  data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
                                                     </ul>
 
                                                 </div>
@@ -423,7 +422,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -451,7 +450,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -479,7 +478,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -507,7 +506,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -535,7 +534,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -563,7 +562,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -591,7 +590,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -619,7 +618,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -651,7 +650,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -679,7 +678,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -707,7 +706,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -734,7 +733,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -761,7 +760,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -788,7 +787,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -815,7 +814,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -842,7 +841,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -897,18 +896,15 @@
                                                     <div class="pro-price">
                                                         <span class="new-price">￥${secondList[status.index].BPrice}</span>
                                                     </div>
-                                                    <div class="new-sale">
-                                                        <span>new</span>
-                                                    </div>
+                                                    
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3>${secondList[status.index].BName}</h3>
-                                                    <h4>${secondList[status.index].BDescription}</h4>
-                                                    <h4><a href="#">view details</a></h4>
+                                                    <h4><a href="books?m=doDetails&bId=${secondList[status.index].BId}">view details</a></h4>
                                                 </div>
                                                 <div class="product-action"><input type="hidden" value="${secondList[status.index].BId}"/>
                                                     <ul>
-                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                        <li class="add-bag"><a  data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -927,13 +923,12 @@
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3>${secondList[status.index+1].BName}</h3>
-                                                    <h4>${secondList[status.index+1].BDescription}</h4>
-                                                    <h4><a href="#">view details</a></h4>
+                                                    <h4><a href="books?m=doDetails&bId=${secondList[status.index+1].BId}">view details</a></h4>
                                                 </div>
                                                 <div class="product-action"><input type="hidden" value="${secondList[status.index+1].BId}"/>
                                                     <ul>
                                                         <!--<li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>-->
-                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                        <li class="add-bag"><a  data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
                                                         <!--<li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>-->
                                                     </ul>
                                                 </div>
@@ -957,12 +952,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -987,7 +980,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1014,7 +1007,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1037,12 +1030,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1067,12 +1058,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1097,7 +1086,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1124,7 +1113,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1149,7 +1138,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1176,7 +1165,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1201,7 +1190,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1228,7 +1217,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1253,7 +1242,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1280,7 +1269,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1305,7 +1294,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1332,7 +1321,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1357,7 +1346,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1386,12 +1375,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1416,7 +1403,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1443,7 +1430,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1468,7 +1455,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1493,12 +1480,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1523,7 +1508,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1550,7 +1535,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1575,7 +1560,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1602,7 +1587,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1627,7 +1612,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1652,12 +1637,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1682,7 +1665,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1709,7 +1692,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1734,7 +1717,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1761,7 +1744,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1786,7 +1769,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1842,18 +1825,15 @@
                                                     <div class="pro-price">
                                                         <span class="new-price">￥${thirdList[status.index].BPrice}</span>
                                                     </div>
-                                                    <div class="new-sale">
-                                                        <span>new</span>
-                                                    </div>
+                                                    
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3>${thirdList[status.index].BName}</h3>
-                                                    <h4>${thirdList[status.index].BDescription}</h4>
-                                                    <h4><a href="#">view details</a></h4>
+                                                    <h4><a href="books?m=doDetails&bId=${thirdList[status.index].BId}">view details</a></h4>
                                                 </div>
                                                 <div class="product-action"><input type="hidden" value="${thirdList[status.index].BId}"/>
                                                     <ul>
-                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                        <li class="add-bag"><a  data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1872,13 +1852,12 @@
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3>${thirdList[status.index+1].BName}</h3>
-                                                    <h4>${thirdList[status.index+1].BDescription}</h4>
-                                                    <h4><a href="#">view details</a></h4>
+                                                    <h4><a href="books?m=doDetails&bId=${thirdList[status.index+1].BId}">view details</a></h4>
                                                 </div>
                                                 <div class="product-action"><input type="hidden" value="${thirdList[status.index+1].BId}"/>
                                                     <ul>
                                                         <!--<li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>-->
-                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                        <li class="add-bag"><a  data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
                                                         <!--<li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>-->
                                                     </ul>
                                                 </div>
@@ -1902,12 +1881,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -1933,7 +1910,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1960,7 +1937,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -1983,12 +1960,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2013,12 +1988,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2043,7 +2016,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2070,7 +2043,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2095,7 +2068,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2122,7 +2095,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2147,7 +2120,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2174,7 +2147,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2199,7 +2172,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2226,7 +2199,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2251,7 +2224,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2278,7 +2251,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2303,7 +2276,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2332,12 +2305,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2362,7 +2333,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2389,7 +2360,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2414,7 +2385,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2439,12 +2410,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2469,7 +2438,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2496,7 +2465,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2521,7 +2490,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2548,7 +2517,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2573,7 +2542,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2598,12 +2567,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2628,7 +2595,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2655,7 +2622,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2680,7 +2647,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2707,7 +2674,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2732,7 +2699,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2789,18 +2756,15 @@
                                                     <div class="pro-price">
                                                         <span class="new-price">￥${fouthList[status.index].BPrice}</span>
                                                     </div>
-                                                    <div class="new-sale">
-                                                        <span>new</span>
-                                                    </div>
+                                                    
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3>${fouthList[status.index].BName}</h3>
-                                                    <h4>${fouthList[status.index].BDescription}</h4>
-                                                    <h4><a href="#">view details</a></h4>
+                                                    <h4><a href="books?m=doDetails&bId=${fouthList[status.index].BId}">view details</a></h4>
                                                 </div>
                                                 <div class="product-action"><input type="hidden" value=""/>
                                                     <ul>
-                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                        <li class="add-bag"><a  data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2819,14 +2783,13 @@
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3>${fouthList[status.index+1].BName}</h3>
-                                                    <h4>${fouthList[status.index+1].BDescription}</h4>
-                                                    <h4><a href="#">view details</a></h4>
+                                                    <h4><a href="books?m=doDetails&bId=${fouthList[status.index+1].BId}">view details</a></h4>
                                                 </div>
                                                 <div class="product-action">
                                                     <input type="hidden" value="${fouthList[status.index].BId}">
                                                     <ul>
                                                         <!--<li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>-->
-                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                        <li class="add-bag"><a  data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
                                                         <!--<li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>-->
                                                     </ul>
                                                 </div>
@@ -2850,12 +2813,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action">
@@ -2881,7 +2842,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2908,7 +2869,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2931,12 +2892,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2961,12 +2920,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -2991,7 +2948,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3018,7 +2975,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3043,7 +3000,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3070,7 +3027,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3095,7 +3052,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3122,7 +3079,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3147,7 +3104,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3174,7 +3131,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3199,7 +3156,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3226,7 +3183,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3251,7 +3208,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3280,12 +3237,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3310,7 +3265,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3337,7 +3292,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3362,7 +3317,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3387,12 +3342,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3417,7 +3370,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3444,7 +3397,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3469,7 +3422,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3496,7 +3449,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3521,7 +3474,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3546,12 +3499,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3576,7 +3527,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3603,7 +3554,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3628,7 +3579,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3655,7 +3606,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3680,7 +3631,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3736,18 +3687,15 @@
                                                     <div class="pro-price">
                                                         <span class="new-price">￥${fifthList[status.index].BPrice}</span>
                                                     </div>
-                                                    <div class="new-sale">
-                                                        <span>new</span>
-                                                    </div>
+                                                    
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3>${fifthList[status.index].BName}</h3>
-                                                    <h4>${fifthList[status.index].BDescription}</h4>
-                                                    <h4><a href="#">view details</a></h4>
+                                                    <h4><a href="books?m=doDetails&bId=${fifthList[status.index].BId}">view details</a></h4>
                                                 </div>
                                                 <div class="product-action"><input type="hidden" value="${fifthList[status.index].BId}"/>
                                                     <ul>
-                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                        <li class="add-bag"><a  data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -3766,13 +3714,12 @@
                                                 </div>
                                                 <div class="product-content text-center">
                                                     <h3>${fifthList[status.index+1].BName}</h3>
-                                                    <h4>${fifthList[status.index+1].BDescription}</h4>
-                                                    <h4><a href="#">view details</a></h4>
+                                                    <h4><a href="books?m=doDetails&bId=${fifthList[status.index+1].BId}">view details</a></h4>
                                                 </div>
                                                 <div class="product-action"><input type="hidden" value="${fifthList[status.index+1].BId}"/>
                                                     <ul>
                                                         <!--<li><a href="#" data-toggle="tooltip" title="Compage"><i class="fa fa-refresh"></i></a></li>-->
-                                                        <li class="add-bag"><a href="#" data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
+                                                        <li class="add-bag"><a  data-toggle="tooltip" title="Shopping Cart">Add to Bag</a></li>
                                                         <!--<li><a href="#" data-toggle="tooltip" title="Like it!"><i class="fa fa-heart"></i></a></li>-->
                                                     </ul>
                                                 </div>
@@ -3796,12 +3743,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3826,7 +3771,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3853,7 +3798,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3876,12 +3821,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3906,12 +3849,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3936,7 +3877,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3963,7 +3904,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -3988,7 +3929,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4015,7 +3956,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4040,7 +3981,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4067,7 +4008,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4092,7 +4033,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4119,7 +4060,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4144,7 +4085,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4171,7 +4112,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4196,7 +4137,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4225,12 +4166,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4255,7 +4194,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4282,7 +4221,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4307,7 +4246,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4332,12 +4271,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4362,7 +4299,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4389,7 +4326,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4414,7 +4351,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4441,7 +4378,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4466,7 +4403,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4491,12 +4428,10 @@
                                                 <div class="pro-price">
                                                     <span class="new-price">￥25.99</span>
                                                 </div>
-                                                <div class="new-sale">
-                                                    <span>new</span>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4521,7 +4456,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4548,7 +4483,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4573,7 +4508,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4600,7 +4535,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>
@@ -4625,7 +4560,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-content text-center">
-                                                <h3>Full sleev</h3><h4>women</h4>
+                                                <h3>Full sleev</h3>
                                                 <h4><a href="#">view details</a></h4>
                                             </div>
                                             <div class="product-action"><input type="hidden" value=""/>

@@ -6,6 +6,7 @@ import com.sxt.bookstore.factory.DaoFactory;
 import com.sxt.bookstore.service.TypeService;
 
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * @author Q2665_yubiums
@@ -27,5 +28,10 @@ public class TypeServiceImpl extends BaseServiceImpl<Type> implements TypeServic
     @Override
     public Type getTypeByName(String name) throws SQLException {
         return dao.getTypeByName(name);
+    }
+
+    @Override
+    public List getBigTypes() throws SQLException {
+        return dao.getBigTypes();
     }
 }

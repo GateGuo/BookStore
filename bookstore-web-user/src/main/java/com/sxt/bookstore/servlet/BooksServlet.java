@@ -2,6 +2,8 @@ package com.sxt.bookstore.servlet;
 
 
 import com.alibaba.fastjson.JSON;
+import com.sxt.bookstore.entity.Books;
+import com.sxt.bookstore.entity.Type;
 import com.sxt.bookstore.service.BooksService;
 import com.sxt.bookstore.service.TypeService;
 import com.sxt.bookstore.service.impl.BooksServiceImpl;
@@ -68,4 +70,21 @@ public class BooksServlet extends BaseServlet {
         request.setAttribute("fifthList",fifthList);
         request.getRequestDispatcher("books.jsp").forward(request,response);
     }
-}
+
+    private void doDetails(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+        int id=Integer.parseInt(request.getParameter("bId"));
+        Books book=null;
+        try {
+            book=service.getOneByPrimaryKey(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        request.setAttribute("book",book);
+        request.getRequestDispatcher("details.jsp").forward(request,response);
+    }
+
+
+
+    }

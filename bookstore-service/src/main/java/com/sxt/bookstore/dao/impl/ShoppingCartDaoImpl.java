@@ -120,4 +120,12 @@ public class ShoppingCartDaoImpl extends BaseDaoImpl<ShoppingCart> implements Sh
 
         return count;
     }
+
+    @Override
+    public ShoppingCart getOneByUid(Integer uid,Integer bid) throws SQLException {
+        String sql = "SELECT * FROM `SHOPPING_CART` WHERE SC_U_ID = ? AND SC_B_ID =?";
+        Object[] params = {uid,bid};
+        ShoppingCart shopping_cart = dqlGetSingle(sql, params);
+        return shopping_cart;
+    }
 }

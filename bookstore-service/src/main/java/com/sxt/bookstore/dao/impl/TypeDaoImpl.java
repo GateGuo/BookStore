@@ -13,7 +13,7 @@ import java.util.List;
  * @author Q2665_yubiums
  */
 @Dao("Type")
-public class TypeDaoImpl extends BaseDaoImpl<Type> implements TypeDao  {
+public class TypeDaoImpl extends BaseDaoImpl<Type> implements TypeDao {
     @Override
     public boolean add(Type typeBean) throws SQLException {
         String sql = "INSERT INTO `TYPE`(" +
@@ -113,9 +113,17 @@ public class TypeDaoImpl extends BaseDaoImpl<Type> implements TypeDao  {
 
     @Override
     public Type getTypeByName(String name) throws SQLException {
-        String sql="SELECT * FROM `TYPE` WHERE T_NAME = ?";
-        Object[] params={name};
-        Type type=dqlGetSingle(sql,params);
+        String sql = "SELECT * FROM `TYPE` WHERE T_NAME = ?";
+        Object[] params = {name};
+        Type type = dqlGetSingle(sql, params);
         return type;
+    }
+
+    @Override
+    public List getBigTypes() throws SQLException {
+        String sql = "SELECT * FROM `TYPE` WHERE T_LEVEL=?";
+        Object[] params = {1};
+        List<Type> list = dqlGetList(sql, params);
+        return list;
     }
 }
