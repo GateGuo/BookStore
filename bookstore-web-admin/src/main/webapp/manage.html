@@ -15,15 +15,15 @@
     </a>
     <div class="layui-col-md4" style="text-align: center;font-size: 20px;color: aliceblue;line-height: 60px;">数据管理</div>
     <ul class="layui-nav layui-bg-cyan" style="position: absolute;right: 0px;">
+        <!--<li class="layui-nav-item">-->
+            <!--<button id="login" class="layui-btn layui-btn-normal">登录</button>-->
+        <!--</li>-->
         <li class="layui-nav-item">
-            <button id="login" class="layui-btn layui-btn-normal">登录</button>
-        </li>
-        <li class="layui-nav-item">
-            <a href=""><img src="//t.cn/RCzsdCq" class="layui-nav-img">用户名</a>
+            <a href=""><!--<img src="//t.cn/RCzsdCq" class="layui-nav-img">-->${admin.aUsername}</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                <dd><a href="">修改信息</a></dd>
-                <dd><a href="">个人中心</a></dd>
-                <dd><a href="">退出</a></dd>
+                <!--<dd><a href="">修改信息</a></dd>-->
+                <!--<dd><a href="">个人中心</a></dd>-->
+                <dd><a href="admins?method=Exit">退出</a></dd>
             </dl>
         </li>
     </ul>
@@ -36,26 +36,26 @@
                 <div style="height: 100%;padding: 0;background-color: #2f4056;" overflow class="layui-card-body">
                     <ul style="width: 100%;" class="layui-nav-tree layui-bg-cyan layui-nav layui-inline">
                         <li class="layui-nav-item layui-nav-itemed">
-                            <a href="jsp/info/UsersInfo.jsp" onclick="return false;">用户</a>
+                            <a href="#" onclick="return false;">管理</a>
                             <dl class="layui-nav-child">
-                                <dd><a href="" onclick="return false;">详情</a></dd>
-                                <dd><a href="https://www.google.co.jp" onclick="return false;">添加</a></dd>
+                                <dd><a href="jsp/info/UsersInfo.jsp" onclick="return false;">用户</a></dd>
+                                <dd><a href="jsp/info/AdminsInfo.jsp" onclick="return false;">管理员</a></dd>
                             </dl>
                         </li>
-                        <li class="layui-nav-item">
-                            <a href="https://www.baidu.com" onclick="return false;">管理员</a>
-                            <dl class="layui-nav-child">
-                                <dd><a href="https://www.baidu.com" onclick="return false;">详情</a></dd>
-                                <dd><a href="https://www.google.com" onclick="return false;">添加</a></dd>
-                            </dl>
-                        </li>
-                        <li class="layui-nav-item">
-                            <a href="https://www.baidu.com" onclick="return false;">用户</a>
-                            <dl class="layui-nav-child">
-                                <dd><a href="https://www.baidu.com" onclick="return false;">详情</a></dd>
-                                <dd><a href="https://www.google.com" onclick="return false;">添加</a></dd>
-                            </dl>
-                        </li>
+                        <!--<li class="layui-nav-item">-->
+                            <!--<a href="https://www.baidu.com" onclick="return false;">管理员</a>-->
+                            <!--<dl class="layui-nav-child">-->
+                                <!--<dd><a href="https://www.baidu.com" onclick="return false;">详情</a></dd>-->
+                                <!--<dd><a href="https://www.google.com" onclick="return false;">添加</a></dd>-->
+                            <!--</dl>-->
+                        <!--</li>-->
+                        <!--<li class="layui-nav-item">-->
+                            <!--<a href="https://www.baidu.com" onclick="return false;">用户</a>-->
+                            <!--<dl class="layui-nav-child">-->
+                                <!--<dd><a href="https://www.baidu.com" onclick="return false;">详情</a></dd>-->
+                                <!--<dd><a href="https://www.google.com" onclick="return false;">添加</a></dd>-->
+                            <!--</dl>-->
+                        <!--</li>-->
                     </ul>
                 </div>
             </div>

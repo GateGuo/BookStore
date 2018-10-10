@@ -1,17 +1,17 @@
 package com.sxt.bookstore.entity;
 
-import java.util.Date;
+
 
 
 /**
  * 订单表(ORDERS)
  * 
  * @author Q2665_yubiums
- * @version 1.0.0 2018-09-27
+ * @version 1.0.0 2018-10-03
  */
 public class Orders implements java.io.Serializable {
     /** 版本号 */
-    private static final long serialVersionUID = -2483327670330105562L;
+    private static final long serialVersionUID = 711654056331789537L;
 
     /** 订单id */
     private Integer orId;
@@ -29,13 +29,19 @@ public class Orders implements java.io.Serializable {
     private Double orPayPrice;
 
     /** 订单生成时间 */
-    private Date orCreateTime;
+    private String orCreateTime;
 
     /** 订单完成时间 */
-    private Date orFinishTime;
+    private String orFinishTime;
 
     /** 订单状态 */
     private Integer orStatus;
+
+    /** 快递公司 */
+    private String orCourierCompany;
+
+    /** 快递单号 */
+    private String orTrackingNumber;
     
     /**
      * 获取订单id
@@ -137,7 +143,7 @@ public class Orders implements java.io.Serializable {
      * 
      * @return 订单生成时间
      */
-    public Date getOrCreateTime() {
+    public String getOrCreateTime() {
         return this.orCreateTime;
     }
     
@@ -147,7 +153,7 @@ public class Orders implements java.io.Serializable {
      * @param orCreateTime
      *          订单生成时间
      */
-    public void setOrCreateTime(Date orCreateTime) {
+    public void setOrCreateTime(String orCreateTime) {
         this.orCreateTime = orCreateTime;
     }
     
@@ -156,7 +162,7 @@ public class Orders implements java.io.Serializable {
      * 
      * @return 订单完成时间
      */
-    public Date getOrFinishTime() {
+    public String getOrFinishTime() {
         return this.orFinishTime;
     }
     
@@ -166,7 +172,7 @@ public class Orders implements java.io.Serializable {
      * @param orFinishTime
      *          订单完成时间
      */
-    public void setOrFinishTime(Date orFinishTime) {
+    public void setOrFinishTime(String orFinishTime) {
         this.orFinishTime = orFinishTime;
     }
     
@@ -188,6 +194,44 @@ public class Orders implements java.io.Serializable {
     public void setOrStatus(Integer orStatus) {
         this.orStatus = orStatus;
     }
+    
+    /**
+     * 获取快递公司
+     * 
+     * @return 快递公司
+     */
+    public String getOrCourierCompany() {
+        return this.orCourierCompany;
+    }
+    
+    /**
+     * 设置快递公司
+     * 
+     * @param orCourierCompany
+     *          快递公司
+     */
+    public void setOrCourierCompany(String orCourierCompany) {
+        this.orCourierCompany = orCourierCompany;
+    }
+    
+    /**
+     * 获取快递单号
+     * 
+     * @return 快递单号
+     */
+    public String getOrTrackingNumber() {
+        return this.orTrackingNumber;
+    }
+    
+    /**
+     * 设置快递单号
+     * 
+     * @param orTrackingNumber
+     *          快递单号
+     */
+    public void setOrTrackingNumber(String orTrackingNumber) {
+        this.orTrackingNumber = orTrackingNumber;
+    }
 
     @Override
     public String toString() {
@@ -197,9 +241,11 @@ public class Orders implements java.io.Serializable {
                 ", orUId=" + orUId +
                 ", orTotalPrice=" + orTotalPrice +
                 ", orPayPrice=" + orPayPrice +
-                ", orCreateTime=" + orCreateTime +
-                ", orFinishTime=" + orFinishTime +
+                ", orCreateTime='" + orCreateTime + '\'' +
+                ", orFinishTime='" + orFinishTime + '\'' +
                 ", orStatus=" + orStatus +
+                ", orCourierCompany='" + orCourierCompany + '\'' +
+                ", orTrackingNumber='" + orTrackingNumber + '\'' +
                 '}';
     }
 }

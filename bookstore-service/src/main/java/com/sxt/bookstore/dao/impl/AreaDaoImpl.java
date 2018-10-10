@@ -13,7 +13,7 @@ import java.util.List;
  * @author Q2665_yubiums
  */
 @Dao("Area")
-public class AreaDaoImpl extends BaseDaoImpl<Area> implements AreaDao  {
+public class AreaDaoImpl extends BaseDaoImpl<Area> implements AreaDao {
     @Override
     public boolean add(Area areaBean) throws SQLException {
         String sql = "INSERT INTO `AREA`(" +
@@ -141,5 +141,35 @@ public class AreaDaoImpl extends BaseDaoImpl<Area> implements AreaDao  {
         List<Area> areas = dqlGetList(sql, params);
 
         return areas;
+    }
+
+    @Override
+    public Area getCityByCountyParentId(int id) throws SQLException {
+        String sql = "SELECT * FROM AREA WHERE AR_LEVEL = 2 AND AR_ID = ?";
+
+        Object[] params = {id};
+        Area area = dqlGetSingle(sql, params);
+
+        return area;
+    }
+
+    @Override
+    public Area getProByCityParentId(int id) throws SQLException {
+        String sql = "SELECT * FROM AREA WHERE AR_LEVEL = 1 AND AR_ID = ?";
+
+        Object[] params = {id};
+        Area area = dqlGetSingle(sql, params);
+
+        return area;
+    }
+
+    @Override
+    public Area getProByCountryParentId(Integer arParentId) throws SQLException {
+        String sql = "SELECT * FROM AREA WHERE AR_LEVEL = 1 AND AR_ID = ?";
+
+        Object[] params = {arParentId};
+        Area area = dqlGetSingle(sql, params);
+
+        return area;
     }
 }

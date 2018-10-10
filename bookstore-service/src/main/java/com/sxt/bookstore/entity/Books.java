@@ -1,7 +1,5 @@
 package com.sxt.bookstore.entity;
 
-import java.util.Date;
-
 
 /**
  * 图书表(BOOKS)
@@ -15,6 +13,9 @@ public class Books implements java.io.Serializable {
 
     /** 书籍id */
     private Integer bId;
+
+    /** 书籍作者 */
+    private String bAuthor;
 
     /** 书名 */
     private String bName;
@@ -35,14 +36,31 @@ public class Books implements java.io.Serializable {
     private Integer bTId;
 
     /** 上架时间 */
-    private Date bUpTime;
+    private String bUpTime;
 
     /** 销量 */
     private Integer bSalesVolume;
 
     /** 图片名 */
     private String bImgName;
-    
+
+    public Books() {
+    }
+
+    public Books(Integer bId, String bAuthor, String bName, Double bPrice, Integer bCount, String bTag, String bDescription, Integer bTId, String bUpTime, Integer bSalesVolume, String bImgName) {
+        this.bId = bId;
+        this.bAuthor = bAuthor;
+        this.bName = bName;
+        this.bPrice = bPrice;
+        this.bCount = bCount;
+        this.bTag = bTag;
+        this.bDescription = bDescription;
+        this.bTId = bTId;
+        this.bUpTime = bUpTime;
+        this.bSalesVolume = bSalesVolume;
+        this.bImgName = bImgName;
+    }
+
     /**
      * 获取书籍id
      * 
@@ -181,7 +199,7 @@ public class Books implements java.io.Serializable {
      * 
      * @return 上架时间
      */
-    public Date getBUpTime() {
+    public String getBUpTime() {
         return this.bUpTime;
     }
     
@@ -191,7 +209,7 @@ public class Books implements java.io.Serializable {
      * @param bUpTime
      *          上架时间
      */
-    public void setBUpTime(Date bUpTime) {
+    public void setBUpTime(String bUpTime) {
         this.bUpTime = bUpTime;
     }
     
@@ -233,10 +251,19 @@ public class Books implements java.io.Serializable {
         this.bImgName = bImgName;
     }
 
+    public String getBAuthor() {
+        return bAuthor;
+    }
+
+    public void setBAuthor(String bAuthor) {
+        this.bAuthor = bAuthor;
+    }
+
     @Override
     public String toString() {
         return "Books{" +
                 "bId=" + bId +
+                ", bAuthor='" + bAuthor + '\'' +
                 ", bName='" + bName + '\'' +
                 ", bPrice=" + bPrice +
                 ", bCount=" + bCount +

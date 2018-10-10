@@ -2,7 +2,7 @@
 @media (min-width: 1400px) and (max-width: 2000px) {
 .container {width:1370px}
     .primary-image, .single-latest-blog-img img, .widget-banner img, .single-member-img > img {width: 100%}
-    .tab-item-slider .product-action ul li.add-bag {width: 59.2%}
+    .tab-item-slider .product-action ul li.add-bag {width: 100%}
     .home-two .newsletter-box form button {margin-left: 296px; margin-top:40px; margin-bottom: 20px}
     .home-two .big-one .timer-banner-text {top: 22%; right:24%}
     .home-two .timer {right: 17%;top: 47%}
@@ -42,7 +42,7 @@
     .single-banner-text h3 a{font-size: 22px}
      a.shop-button {padding: 3px 12px}
     .wish-icon-hover ul li, .product-action ul li {width: 21%}
-    .product-action ul li.add-bag {width: 57%}
+    .product-action ul li.add-bag {width: 100%}
     .single-banner-big {width: 66.6666666%}
     .home-two .banner-left-img, .home-two .single-banner-small {width: 25%}
     .banner-timer-area.home-two .single-banner-big {width: 50%}
@@ -147,15 +147,15 @@
     .blog-fullview-area.left-sidebar .search-box {margin-top: 0}
     .single-left-widget .section-title ul.size-widget li a {padding: 12px 64.5px !important}
     .shop-grid-leftsidebar-area .wish-icon-hover ul li, .product-action ul li {width: 21%}
-    .shop-grid-leftsidebar-area .product-action ul li.add-bag {width: 57%}
+    .shop-grid-leftsidebar-area .product-action ul li.add-bag {width: 100%}
     #list .product-desc {margin-bottom: 35px}
     .shop-product-text {padding: 22px 20px 35px 30px}
-    .shop-list-leftsidebar-area #grid .product-action ul li.add-bag {width: 57%}
+    .shop-list-leftsidebar-area #grid .product-action ul li.add-bag {width: 100%}
     .cart_list tbody td, th.add-cart > a, .add-cart {padding: 5px}
     th.add-cart > a {font-size: 12px}
     .discount-code, .total {margin-top: 30px}
     .slider-content h1.title {font-size: 38px;line-height: 40px}
-    .product-action ul li.add-bag {width: 57%}
+    .product-action ul li.add-bag {width: 100%}
     .preview-2 .nivo-directionNav a.nivo-prevNav::after {right: -7px}
     .cart_list thead th { padding: 15px}
     .product-description-tab, .newsletter-area.home-two, .newsletter-box form button {margin-top: 50px}
@@ -297,11 +297,11 @@
     .mobile-menu-area{display:block}
     .mainmenu{display: none}
     .footer-widget{margin-bottom: 30px}
-    .product-action ul li.add-bag {width: 58.8%}
+    .product-action ul li.add-bag {width: 100%;}
     .single-latest-blog-text h5 {float: right}
     .primary-image, .widget-banner img{width: 100%}
     .shop-fullgrid-area .product-action ul li a {width: 14%}
-    .product-action ul li.add-bag {width: 59%, margin-right:1px}
+    .product-action ul li.add-bag {width: 100%; margin-right:1px}
     .product-action ul li {margin-right: 1px}
     .single-left-widget .section-title ul.size-widget li a {padding: 12px 34.5px !important}
     

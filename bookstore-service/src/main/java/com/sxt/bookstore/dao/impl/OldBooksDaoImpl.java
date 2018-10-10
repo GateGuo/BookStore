@@ -145,4 +145,14 @@ public class OldBooksDaoImpl extends BaseDaoImpl<OldBooks> implements OldBooksDa
 
         return count;
     }
+
+    @Override
+    public List<OldBooks> getHotOldBooks(int typeId,int number) throws SQLException {
+        String sql="SELECT * FROM `old_books` where ob_type_id=? ORDER BY ob_sales_volume LIMIT 0,?";
+        Object[] params = {typeId,number};
+        List<OldBooks> list = dqlGetList(sql, params);
+        return list;
+    }
+
+
 }

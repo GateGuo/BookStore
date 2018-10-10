@@ -1154,7 +1154,8 @@ span.counting{
     margin-right: 0px;
 }
 .product-action ul li.add-bag {
-    width: 59%;
+    cursor: pointer;
+    width: 100%;
 }
 .product-action ul li a{
     background: #303030 none repeat scroll 0 0;
@@ -1227,7 +1228,7 @@ span.counting{
 .wish-icon-hover ul li:nth-child(3) a, .product-action ul li:nth-child(3) a{
     transition-delay: 0.3s;
 }
-.product-action {
+ .product-action{
     bottom: 0;
     left: 0;
     position: absolute;
@@ -1332,7 +1333,6 @@ label {
   font-weight: 300;
 }
 .date-comment{
-    border-bottom: 1px solid #ddd;
     margin-bottom: 12px;
     padding: 0px 30px;
 }
@@ -2942,7 +2942,7 @@ option {
     padding: 0;
 }
 .blog-fullview-area .date-comment {
-    margin-bottom: 17px;
+    /*margin-bottom: 17px;*/
 }
 .blog-fullview-area .single-latest-blog-img {
     padding-bottom: 16px;
@@ -3034,6 +3034,7 @@ p.comment_time {
     line-height: 0;
 }
 .comment-reply-link {
+    cursor: pointer;
     background: #f05a66 none repeat scroll 0 0;
     color: #ffffff;
     font-size: 13px;
@@ -3048,6 +3049,7 @@ p.comment_time {
     transition: all 0.5s ease 0s;
 }
 .comment-reply-link:hover {
+    cursor: pointer;
     color: #000;
 }
 ol {
@@ -3647,7 +3649,7 @@ input.input-text, select, textarea {
 }
 #add-new-address-info {display: none}
 .checkout-area p.back-link {
-    background: rgba(0, 0, 0, 0) url("img/icon/arrow-up.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("img/icon/arrow-top.png") no-repeat scroll 0 0;
     float: left;
     line-height: 14px;
     margin-top: 13px;

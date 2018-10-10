@@ -65,12 +65,6 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
      */
     protected T dqlGetSingle(String sql, Object[] params) throws SQLException {
 
-//        // 创建一个BeanProcessor对象
-//        // GenerousBeanProcessor 仅仅重写了父类BeanProcessor的mapColumnsToProperties方法
-//        BeanProcessor bean = new GenerousBeanProcessor();
-//        // 将GenerousBeanProcessor对象传递给BasicRowProcessor
-//        RowProcessor processor = new BasicRowProcessor(bean);
-
         T t = queryRunner.query(sql,
                 new BeanHandler<>(tClass, processor),
                 params);

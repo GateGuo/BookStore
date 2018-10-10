@@ -31,12 +31,11 @@
 
         //第一个实例
         table.render({
-            elem: '#demo'
-            ,height: 362
-            ,url: '' //数据接口
+            // elem: '#demo'
+            height: 362
+            ,url: 'orders?method=GetGoods&orId='+${orId} //数据接口
             ,page: true //开启分页
             ,cellMinWidth: 80
-            ,toolbar: 'default'
             ,size: 'sm'
             ,even: true
             ,cols: [[ //表头

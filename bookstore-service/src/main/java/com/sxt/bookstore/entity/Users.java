@@ -33,6 +33,7 @@ public class Users implements java.io.Serializable {
 
     /** 省市区id */
     private Integer uArId;
+    private String uAr;
 
     /** 地址 */
     private String uAddress;
@@ -51,7 +52,26 @@ public class Users implements java.io.Serializable {
 
     /** 是否卖家 */
     private Integer uIsSeller;
-    
+
+    public Users() {
+    }
+
+    public Users(Integer uId, String uUsername, String uPassword, Integer uVipLevel, String uIdCard, String uName, Integer uArId, String uAddress, String uPhonenumber, Double uAccountBalance, Double uSalesBalance, Double uTotalRecharge, Integer uIsSeller) {
+        this.uId = uId;
+        this.uUsername = uUsername;
+        this.uPassword = uPassword;
+        this.uVipLevel = uVipLevel;
+        this.uIdCard = uIdCard;
+        this.uName = uName;
+        this.uArId = uArId;
+        this.uAddress = uAddress;
+        this.uPhonenumber = uPhonenumber;
+        this.uAccountBalance = uAccountBalance;
+        this.uSalesBalance = uSalesBalance;
+        this.uTotalRecharge = uTotalRecharge;
+        this.uIsSeller = uIsSeller;
+    }
+
     /**
      * 获取用户id
      * 
@@ -299,6 +319,15 @@ public class Users implements java.io.Serializable {
         this.uIsSeller = uIsSeller;
     }
 
+
+    public String getuAr() {
+        return uAr;
+    }
+
+    public void setuAr(String uAr) {
+        this.uAr = uAr;
+    }
+
     @Override
     public String toString() {
         return "Users{" +
@@ -309,6 +338,7 @@ public class Users implements java.io.Serializable {
                 ", uIdCard='" + uIdCard + '\'' +
                 ", uName='" + uName + '\'' +
                 ", uArId=" + uArId +
+                ", uAr=" + uAr +
                 ", uAddress='" + uAddress + '\'' +
                 ", uPhonenumber='" + uPhonenumber + '\'' +
                 ", uAccountBalance=" + uAccountBalance +

@@ -33,7 +33,37 @@ public class Comments implements java.io.Serializable {
 
     /** 评论时间 */
     private Date cTime;
-    
+
+    private int callBack;
+
+    private String cUName;
+
+    private String cUTargetName;
+
+    public String getcUTargetName() {
+        return cUTargetName;
+    }
+
+    public void setcUTargetName(String cUTargetName) {
+        this.cUTargetName = cUTargetName;
+    }
+
+    public String getcUName() {
+        return cUName;
+    }
+
+    public void setcUName(String cUName) {
+        this.cUName = cUName;
+    }
+
+    public int getCallBack() {
+        return callBack;
+    }
+
+    public void setCallBack(int callBack) {
+        this.callBack = callBack;
+    }
+
     /**
      * 获取评论id
      * 

@@ -6,14 +6,30 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/"; %>
+<base href="<%=basePath%>">
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>大学信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <title>图书信息</title>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
+
+<div class="layui-table-tool-temp" hidden id="he-bar">
+    <div class="layui-inline" lay-event="add">
+        <i class="layui-icon layui-icon-add-1"></i>
+    </div>
+    <div class="layui-inline" lay-event="update">
+        <i class="layui-icon layui-icon-edit"></i>
+    </div>
+    <div class="layui-inline" lay-event="refresh">
+        <i class="layui-icon layui-icon-refresh"></i>
+    </div>
+</div>
+
 
 <table id="demo" lay-filter="test"></table>
 
@@ -23,26 +39,28 @@
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
-<script src="/layui/layui.js"></script>
+<script src="layui/layui.js"></script>
 <script>
-    layui.use(['table','layer'], function(){
+    layui.use(['table','layer','jquery'], function(){
         var table = layui.table;
         var layer = layui.layer;
+        var $ = layui.jquery;
 
         //第一个实例
         table.render({
             elem: '#demo'
-            ,height: 362
-            ,url: '' //数据接口
+            ,height: 450
+            ,url: 'books?method=Show' //数据接口
             ,page: true //开启分页
             ,cellMinWidth: 80
-            ,toolbar: 'default'
+            ,toolbar: '#he-bar'
             ,size: 'sm'
             ,even: true
             ,cols: [[ //表头
                 {type:'checkbox', fixed: 'left'}
                 ,{field: 'bId', title: '书籍id',  sort: true, fixed: 'left'}
                 ,{field: 'bName', title: '书名'}
+                ,{field: 'bAuthor', title: '作者'}
                 ,{field: 'bPrice', title: '价格'}
                 ,{field: 'bCount', title: '库存'}
                 ,{field: 'bTag', title: '标签'}
@@ -68,13 +86,13 @@
         //监听头工具栏事件
         table.on('toolbar(test)', function(obj){
             var checkStatus = table.checkStatus(obj.config.id)
-                    ,data = checkStatus.data; //获取选中的数据
+                ,data = checkStatus.data; //获取选中的数据
             switch(obj.event){
                 case 'add':
                     layer.open({
                         type: 2,
-                        area: ['550px', '350px'],
-                        content: 'AddUniversity.html' //这里content是一个普通的url,todo 根据实际填写
+                        area: ['750px', '450px'],
+                        content: 'jsp/add/booksAdd.jsp' //这里content是一个普通的url,todo 根据实际填写
                     });
                     break;
                 case 'update':
@@ -85,17 +103,13 @@
                     } else {
                         layer.open({
                             type: 2,
-                            area: ['550px', '350px'],
-                            content: '/upduniversity?universityNo='+data[0].universityNo//todo 根据实际填写
+                            area: ['750px', '450px'],
+                            content: 'books?method=EditGet&bId='+data[0].bId//todo 根据实际填写
                         });
                     }
                     break;
-                case 'delete':
-                    if(data.length === 0){
-                        layer.msg('请选择一行');
-                    } else {
-                        layer.msg('删除');
-                    }
+                case 'refresh':
+                    location.reload();
                     break;
             };
         });
@@ -108,17 +122,27 @@
                 layer.msg('查看操作');
             } else if(layEvent === 'del'){
                 layer.confirm('真的删除行么', function(index){
-                    obj.del(); //删除对应行（tr）的DOM结构
                     layer.close(index);
                     //向服务端发送删除指令
+                    $.get('books?method=Del', {'bId': data.bId}, function (msg) {
+                        console.log(msg);
+                        if (msg === 'success') {
+                            layer.msg('删除成功');
+                            obj.del(); //删除对应行（tr）的DOM结构
+                        } else if (msg === 'fail') {
+                            layer.msg('删除失败');
+                        } else {
+                            layer.msg('删除出错')
+                        }
+                    });
                 });
             } else if(layEvent === 'edit'){
                 // layer.msg('编辑操作');
                 // layer.alert('编辑 [id]：'+ data.universityNo);
                 layer.open({
                     type: 2,
-                    area: ['550px', '350px'],
-                    content: '/upduniversity?universityNo='+data.universityNo//todo 根据实际填写
+                    area: ['750px', '450px'],
+                    content: 'books?method=EditGet&bId='+data.bId //todo 根据实际填写
                 });
             }
         });

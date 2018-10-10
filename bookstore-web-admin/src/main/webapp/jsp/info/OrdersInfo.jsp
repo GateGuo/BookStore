@@ -6,24 +6,39 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/"; %>
+<base href="<%=basePath%>">
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>大学信息</title>
-    <script type="text/javascript" src="/layui/layui.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="/layui/css/layui.css"/>
+    <title>订单信息</title>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
+
+<div class="layui-table-tool-temp" hidden id="he-bar">
+    <!--<div class="layui-inline" lay-event="add">-->
+        <!--<i class="layui-icon layui-icon-add-1"></i>-->
+    <!--</div>-->
+    <div class="layui-inline" lay-event="update">
+        <i class="layui-icon layui-icon-edit"></i>
+    </div>
+    <div class="layui-inline" lay-event="refresh">
+        <i class="layui-icon layui-icon-refresh"></i>
+    </div>
+</div>
 
 <table id="demo" lay-filter="test"></table>
 
 <script type="text/html" id="barDemo">
-    <%--<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>--%>
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
     <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    <!--<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>-->
 </script>
 
-<script src="/layui/layui.js"></script>
+<script src="layui/layui.js"></script>
 <script>
     layui.use(['table','layer'], function(){
         var table = layui.table;
@@ -33,10 +48,10 @@
         table.render({
             elem: '#demo'
             ,height: 362
-            ,url: '' //数据接口
+            ,url: 'orders?method=Show' //数据接口
             ,page: true //开启分页
-            ,cellMinWidth: 80
-            ,toolbar: 'default'
+            ,cellMinWidth: 70
+            ,toolbar: '#he-bar'
             ,size: 'sm'
             ,even: true
             ,cols: [[ //表头
@@ -49,7 +64,9 @@
                 ,{field: 'orCreateTime', title: '订单生成时间'}
                 ,{field: 'orFinishTime', title: '订单完成时间'}
                 ,{field: 'orStatus', title: '订单状态'}
-                ,{fixed: 'right', width: 120, align:'center', toolbar: '#barDemo'}
+                ,{field: 'orCourierCompany', title: '快递公司'}
+                ,{field: 'orTrackingNumber', title: '快递单号'}
+                ,{fixed: 'right', title: '操作', width: 120, align:'center', toolbar: '#barDemo'}
             ]]
             ,response: {
                 statusCode: 200 //重新规定成功的状态码为 200，table 组件默认为 0
@@ -68,13 +85,6 @@
             var checkStatus = table.checkStatus(obj.config.id)
                     ,data = checkStatus.data; //获取选中的数据
             switch(obj.event){
-                case 'add':
-                    layer.open({
-                        type: 2,
-                        area: ['550px', '350px'],
-                        content: 'AddUniversity.html' //这里content是一个普通的url,todo 根据实际填写
-                    });
-                    break;
                 case 'update':
                     if(data.length === 0){
                         layer.msg('请选择一行');
@@ -83,17 +93,13 @@
                     } else {
                         layer.open({
                             type: 2,
-                            area: ['550px', '350px'],
-                            content: '/upduniversity?universityNo='+data[0].universityNo//todo 根据实际填写
+                            area: ['750px', '450px'],
+                            content: 'orders?method=EditGet&orId='+data[0].orId//todo 根据实际填写
                         });
                     }
                     break;
-                case 'delete':
-                    if(data.length === 0){
-                        layer.msg('请选择一行');
-                    } else {
-                        layer.msg('删除');
-                    }
+                case 'refresh':
+                    location.reload();
                     break;
             };
         });
@@ -104,19 +110,35 @@
                     ,layEvent = obj.event; //获得 lay-event 对应的值
             if(layEvent === 'detail'){
                 layer.msg('查看操作');
+                layer.open({
+                    type: 2,
+                    area: ['750px', '450px'],
+                    content: 'OrderGoodsInfo.jsp?orId='+data.orId//todo 根据实际填写
+                });
             } else if(layEvent === 'del'){
                 layer.confirm('真的删除行么', function(index){
-                    obj.del(); //删除对应行（tr）的DOM结构
+                    // obj.del(); //删除对应行（tr）的DOM结构
                     layer.close(index);
                     //向服务端发送删除指令
+                    $.get('orders?method=Del', {'orId': data.orId}, function (msg) {
+                        console.log(msg);
+                        if (msg === 'success') {
+                            layer.msg('删除成功');
+                            obj.del(); //删除对应行（tr）的DOM结构
+                        } else if (msg === 'fail') {
+                            layer.msg('删除失败');
+                        } else {
+                            layer.msg('删除出错')
+                        }
+                    });
                 });
             } else if(layEvent === 'edit'){
                 // layer.msg('编辑操作');
                 // layer.alert('编辑 [id]：'+ data.universityNo);
                 layer.open({
                     type: 2,
-                    area: ['550px', '350px'],
-                    content: '/upduniversity?universityNo='+data.universityNo//todo 根据实际填写
+                    area: ['750px', '450px'],
+                    content: 'orders?method=EditGet&orId='+data.orId //todo 根据实际填写
                 });
             }
         });

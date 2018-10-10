@@ -12,10 +12,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>大学信息</title>
+    <title>用户信息</title>
     <link rel="stylesheet" type="text/css" media="screen" href="layui/css/layui.css"/>
 </head>
 <body>
+<div class="layui-table-tool-temp" hidden id="he-bar">
+    <div class="layui-inline" lay-event="refresh">
+        <i class="layui-icon layui-icon-refresh"></i>
+    </div>
+</div>
+
 <table id="demo" lay-filter="test"></table>
 
 <script type="text/html" id="barDemo">
@@ -26,9 +32,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script type="text/javascript" src="layui/layui.js"></script>
 <script>
-    layui.use(['table','layer'], function(){
+    layui.use(['table','layer','jquery'], function(){
         var table = layui.table;
         var layer = layui.layer;
+        var $ = layui.jquery;
+
+
+
 
         //第一个实例
         table.render({
@@ -37,18 +47,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             ,url: 'users?method=Show' //数据接口
             ,page: true //开启分页
             ,cellMinWidth: 80
-            ,toolbar: true
+            ,toolbar: '#he-bar'
             ,size: 'sm'
             ,even: true
             ,cols: [[ //表头
-                {type:'checkbox', fixed: 'left'}
+                { type:'checkbox', fixed: 'left'}
                 ,{field: 'uId', title: '用户id',  sort: true, fixed: 'left'}
                 ,{field: 'uUsername', title: '用户名'}
                 ,{field: 'uPassword', title: '密码'}
                 ,{field: 'uVipLevel', title: '会员等级'}
                 ,{field: 'uIdCard', title: '身份证'}
                 ,{field: 'uName', title: '姓名'}
-                ,{field: 'uArId', title: '省市区id'}
+                ,{field: 'uAr', title: '省市区'}
                 ,{field: 'uAddress', title: '地址'}
                 ,{field: 'uPhonenumber', title: '手机号码'}
                 ,{field: 'uAccountBalance', title: '账户余额'}
@@ -70,37 +80,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 };
             }
         });
+
         //监听头工具栏事件
         table.on('toolbar(test)', function(obj){
-            var checkStatus = table.checkStatus(obj.config.id)
-                    ,data = checkStatus.data; //获取选中的数据
             switch(obj.event){
-                case 'add':
-                    layer.open({
-                        type: 2,
-                        area: ['450px', '350px'],
-                        content: 'jsp/add/usersAdd.jsp' //这里content是一个普通的url,todo 根据实际填写
-                    });
-                    break;
-                case 'update':
-                    if(data.length === 0){
-                        layer.msg('请选择一行');
-                    } else if(data.length > 1){
-                        layer.msg('只能同时编辑一个');
-                    } else {
-                        layer.open({
-                            type: 2,
-                            area: ['550px', '350px'],
-                            content: '/upduniversity?universityNo='+data[0].universityNo//todo 根据实际填写
-                        });
-                    }
-                    break;
-                case 'delete':
-                    if(data.length === 0){
-                        layer.msg('请选择一行');
-                    } else {
-                        layer.msg('删除');
-                    }
+                case 'refresh':
+                    location.reload();
                     break;
             };
         });
@@ -116,13 +101,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     obj.del(); //删除对应行（tr）的DOM结构
                     layer.close(index);
                     //向服务端发送删除指令
+                    $.get('users?method=Del', {'uId': data.uId}, function (msg) {
+                        console.log(msg);
+                        if (msg === 'success') {
+                            layer.msg('删除成功');
+                        } else if (msg === 'fail') {
+                            layer.msg('删除失败');
+                        } else {
+                            layer.msg('删除出错')
+                        }
+                    });
                 });
             } else if(layEvent === 'edit'){
                 // layer.msg('编辑操作');
                 // layer.alert('编辑 [id]：'+ data.universityNo);
                 layer.open({
                     type: 2,
-                    area: ['550px', '450px'],
+                    area: ['750px', '450px'],
                     content: 'users?method=EditGet&uId='+data.uId//todo 根据实际填写
                 });
             }

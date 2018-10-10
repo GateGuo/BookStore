@@ -1154,7 +1154,7 @@ span.counting{
     margin-right: 0px;
 }
 .product-action ul li.add-bag {
-    width: 59%;
+    width: 100%;
 }
 .product-action ul li a{
     background: #303030 none repeat scroll 0 0;
@@ -1227,7 +1227,7 @@ span.counting{
 .wish-icon-hover ul li:nth-child(3) a, .product-action ul li:nth-child(3) a{
     transition-delay: 0.3s;
 }
-.product-action {
+ .product-action{
     bottom: 0;
     left: 0;
     position: absolute;
@@ -2144,7 +2144,7 @@ ul.color-widget li:last-child{
 }
 .single-left-widget .section-title ul.color-widget li a {
     color: #303030;
-    display: block;t
+    display: block;
     font-size: 12px;
     height: 20px;
     line-height: 19px;

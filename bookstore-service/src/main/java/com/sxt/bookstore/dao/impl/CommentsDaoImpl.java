@@ -125,4 +125,20 @@ public class CommentsDaoImpl extends BaseDaoImpl<Comments> implements CommentsDa
 
         return count;
     }
+
+    @Override
+    public List<Comments> getFive(int bid) throws SQLException {
+        String sql = "SELECT * FROM `COMMENTS`  where c_b_id=? LIMIT 0,5";
+        Object[] params = {bid};
+        List<Comments> list = dqlGetList(sql, params);
+        return list;
+    }
+
+    @Override
+    public List<Comments> getCallBack(int bid, int cid) throws SQLException {
+        String sql = "SELECT * FROM `COMMENTS`  where c_b_id=? and c_parent_id=?";
+        Object[] params = {bid,cid};
+        List<Comments> list = dqlGetList(sql, params);
+        return list;
+    }
 }
