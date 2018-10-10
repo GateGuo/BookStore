@@ -110,4 +110,9 @@ public class AdminsDaoImpl extends BaseDaoImpl<Admins> implements AdminsDao  {
 
         return count;
     }
+
+    @Override
+    public Admins login(Admins admins) throws SQLException {
+        return null;
+    }
 }

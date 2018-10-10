@@ -140,4 +140,29 @@ public class BooksDaoImpl extends BaseDaoImpl<Books> implements BooksDao  {
 
         return count;
     }
+
+    @Override
+    public List<Books> getHotBooks(int typeId, int number) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Long getCountByKeyWords(String keyword) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public List<Books> getListByKeyWords(String keyword, int page, int size) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public List<Books> getListByTypeId(int tid, int page, int size) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Long getCountByTypeId(int tid) throws SQLException {
+        return null;
+    }
 }
